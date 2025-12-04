@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnet Solutions - Healthcare Accreditation Consultancy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f766e;
+            --accent: #059669;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #06b6d4 100%);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 118, 110, 0.3);
+        }
+
+        .footer-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .accreditation-badge {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            margin: 0 auto 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div
+                        class="bg-white text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3 shadow-md">
+                        <!-- <i class="fas fa-magnet text-xl"></i> -->
+                        <img src="logo.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">MAGNET <span class="text-blue-600">SOLUTIONS</span>
+                        </h1>
+                        <p class="text-xs text-gray-500">Healthcare Accreditation Specialists</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">HOME</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">SERVICES</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <!-- <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">BLOGS</a> -->
+                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">HOME</a>
+                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
+                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">SERVICES</a>
+                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">BLOGS</a>
+                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 hero-content mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        Empowering Hospitals With Trusted Accreditation & Healthcare Consultancy
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Achieve NABH, NABL & QCI Standards With Expert Guidance, Seamless Processes, and End-to-End
+                        Support.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <!-- <a href="#" class="btn-primary text-white font-bold py-4 px-8 rounded-lg text-center">
+                            Start Your Accreditation Journey
+                        </a> -->
+                        <a href="#"
+                            class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-center hover:bg-gray-100 transition">
+                            Get Free Consultation
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-md">
+                            <div class="flex items-center mb-6">
+                                <div
+                                    class="bg-white text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-hospital-alt text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold">Accreditation Success</h3>
+                                    <p class="text-blue-100">Guaranteed Compliance</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-white/20 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold">100+</div>
+                                    <div class="text-sm">Happy Clients</div>
+                                </div>
+                                <div class="bg-white/20 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold">10+</div>
+                                    <div class="text-sm">Years Experience</div>
+                                </div>
+                                <div class="bg-white/20 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold">20+</div>
+                                    <div class="text-sm">Team Experts</div>
+                                </div>
+                                <div class="bg-white/20 rounded-lg p-4 text-center">
+                                    <div class="text-3xl font-bold">10+</div>
+                                    <div class="text-sm">Guiding Hands</div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <p class="text-blue-100">Trusted by hospitals across India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Welcome To Magnet Solutions</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Healthcare Consultancy" class="rounded-2xl shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <p class="text-gray-700 text-lg mb-6">
+                        Magnet Solutions is an all-inclusive healthcare consulting firm that assists hospitals, clinics
+                        and diagnostic facilities to meet national standards of quality.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        We document complicated accreditation procedures such as NABH, NABL, QCI, ECHS/CGHS empanelment,
+                        TPA onboarding, and others, with professional assistance and practical implementation.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-8">
+                        We operate with the spirit of quality improvement, patient safety, operational excellence, and
+                        compliance in our mind, making sure that your healthcare facility is up to every need, with
+                        skill and comfort.
+                    </p>
+                    <a href="#" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                <div class="stats-card rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">10+</div>
+                    <div class="text-gray-700 font-medium">Years Of Experience</div>
+                </div>
+                <div class="stats-card rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">20+</div>
+                    <div class="text-gray-700 font-medium">Our Team</div>
+                </div>
+                <div class="stats-card rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">10+</div>
+                    <div class="text-gray-700 font-medium">Guiding Hands</div>
+                </div>
+                <div class="stats-card rounded-xl p-6 text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                    <div class="text-gray-700 font-medium">Our Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Services We Offer</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Comprehensive healthcare accreditation and consultancy services tailored to your facility's needs
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl p-8">
+                    <div class="accreditation-badge">
+                        <i class="fas fa-hospital text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">NABH Entry-Level Accreditation</h3>
+                    <p class="text-gray-600 mb-6">
+                        We assist hospitals to fulfill the necessary NABH standards with a full documentation, policy
+                        development, gap analysis, requirements training of staff, and audit preparation to guarantee a
+                        successful and rapid accreditation.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center justify-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl p-8">
+                    <div class="accreditation-badge">
+                        <i class="fas fa-file-medical text-3xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">QCI ECHS & CGHS Empanelment</h3>
+                    <p class="text-gray-600 mb-6">
+                        Get empaneled with ECHS and CGHS effortlessly. We simplify the whole procedure of application,
+                        paperwork, compliance check and follow up to ensure approvals are obtained promptly.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center justify-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl p-8">
+                    <div class="accreditation-badge">
+                        <i class="fas fa-shield-alt text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">TPA Insurance Empanelment</h3>
+                    <p class="text-gray-600 mb-6">
+                        Connect with a wider range of potential patients through the membership of several insurance
+                        companies. We handle TPA programs, paperwork, communication, and compliance to ensure that your
+                        patients receive trouble-free cashless services.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center justify-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl p-8">
+                    <div class="accreditation-badge">
+                        <i class="fas fa-chart-line text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Increase online presence of your hospital through effective digital marketing of healthcare
+                        online- website development, search engine optimization, social media marketing, reputation
+                        building, Google advertising, and healthcare specific branding solutions.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center justify-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl p-8">
+                    <div class="accreditation-badge">
+                        <i class="fas fa-vial text-3xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">NABL Entry-Level Accreditation</h3>
+                    <p class="text-gray-600 mb-6">
+                        In the case of labs and diagnostic centers, we provide organized advice on the NABL compliance,
+                        quality manuals, technical procedures, internal audits, as well as assessment preparedness.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center justify-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl p-8">
+                    <div class="accreditation-badge">
+                        <i class="fas fa-award text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">NABH Full Accreditation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Full NABH accreditation including full-service documentation and committees, quality indicators,
+                        audits, mock exercises and compliance alignment.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center justify-center">
+                        READ MORE <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Magnet Solutions?</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-blue-600">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Experienced healthcare consultants</h3>
+                    </div>
+                    <p class="text-gray-600">Our team comprises industry veterans with decades of combined experience in
+                        healthcare accreditation.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-teal-600">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-teal-100 text-teal-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tasks text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">End-to-end accreditation support</h3>
+                    </div>
+                    <p class="text-gray-600">From initial assessment to final certification, we guide you through every
+                        step of the process.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-green-600">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-green-100 text-green-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-bolt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Fast processing & documentation</h3>
+                    </div>
+                    <p class="text-gray-600">We streamline paperwork and processes to ensure timely accreditation
+                        without compromising quality.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-purple-600">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-purple-100 text-purple-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Staff training & mock audits</h3>
+                    </div>
+                    <p class="text-gray-600">Comprehensive training programs and simulated audits prepare your team for
+                        real certification assessments.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-amber-600">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-amber-100 text-amber-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-check-circle text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">100% compliance-driven approach</h3>
+                    </div>
+                    <p class="text-gray-600">We ensure your facility meets all regulatory requirements and standards for
+                        successful accreditation.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-red-600">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-red-100 text-red-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-cogs text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Customized solutions for every hospital</h3>
+                    </div>
+                    <p class="text-gray-600">Tailored strategies that address the unique needs and challenges of your
+                        specific healthcare facility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Clients Reviews</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="testimonial-card p-8">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-2xl mr-4">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">AS Global Consultancy</h4>
+                            <p class="text-gray-600">AS Global Consultancy NABH C...</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Magnet Solutions provided exceptional guidance throughout our NABH accreditation process. Their
+                        expertise and attention to detail made what seemed like a daunting task manageable and
+                        successful."
+                    </p>
+                </div>
+
+                <div class="testimonial-card p-8">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 font-bold text-2xl mr-4">
+                            DV
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Dr. Visinal Kr Choudhary</h4>
+                            <p class="text-gray-600">Dr. Visinal Kr Choudhary (ULP)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "The team at Magnet Solutions transformed our hospital's compliance approach. Their systematic
+                        methodology and ongoing support were instrumental in achieving our accreditation goals ahead of
+                        schedule."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 hero-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Hospital's Quality & Accreditation Standards?
+            </h2>
+            <p class="text-xl mb-10 text-blue-100 max-w-3xl mx-auto">
+                Let Magnet Solutions be your trusted partner in achieving NABH, NABL, QCI, and TPA milestones.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6">
+                <!-- <a href="#" class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition">
+                    Contact Us Today
+                </a> -->
+                <a href="#" class="btn-secondary text-white font-bold py-4 px-8 rounded-lg text-lg">
+                    Book Free Consultation
+                </a>
+                <!-- <a href="#" class="border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white/10 transition">
+                    Start Your Accreditation Process
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">QUICK LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">HOME</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
+                        <!-- <li><a href="#" class="text-gray-300 hover:text-white transition">BLOGS</a></li> -->
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">CONTACT US</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">LOCATION</h3>
+                    <div class="space-y-4">
+                        <!-- <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <a href="mailto:info@magnet-solutions.com" class="text-gray-300 hover:text-white transition">
+                                info@magnet-solutions.com
+                            </a>
+                        </div> -->
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-blue-400"></i>
+                            <div>
+                                <a href="tel:+918174836441"
+                                    class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
+                                <!-- <a href="tel:+917052279251" class="text-gray-300 hover:text-white transition block">+91-7052279251</a> -->
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <a href="https://maps.app.goo.gl/ErHJMYs8h59gvh7n6">
+                                <div class="text-gray-300">
+                                    119/234 Om Nagar<br>
+                                    Darshan Purwa,<br>
+                                    Kanpur Nagar 208012
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6">MAP</h3>
+                    <div class="bg-gray-800 rounded-xl p-4">
+                        <!-- <div class="h-64 bg-gray-700 rounded-lg flex items-center justify-center mb-4"> -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin"
+                            width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- </div> -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <div class="bg-white text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
+                            <!-- <i class="fas fa-magnet text-xl"></i> -->
+                            <img src="logo.png" alt="">
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">MAGNET <span class="text-blue-400">SOLUTIONS</span></h2>
+                            <p class="text-xs text-gray-400">Healthcare Accreditation Specialists</p>
+                        </div>
+                    </div>
+
+                    <div class="text-gray-400 text-sm text-center md:text-right">
+                        <p>© 2025 Magnet Solutions. All rights reserved.</p>
+                        <p class="mt-1">Designed with precision for healthcare excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
