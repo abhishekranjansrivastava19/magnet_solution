@@ -12,9 +12,16 @@
         rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #0f766e;
+            --primary: #0a4a76; /* user-provided */
+            --primary-rgb: 10, 74, 118;
+            --primary-dark: #083955;
+            --primary-100: #e9f1f8;
+            --primary-400: #2b6b97;
+            --secondary: #45908b; /* user-provided */
+            --secondary-rgb: 69, 144, 139;
+            --secondary-dark: #376a64;
+            --secondary-100: #e6f5f3;
+            --secondary-400: #38a79e;
             --accent: #059669;
             --light-bg: #f8fafc;
             --text-dark: #1e293b;
@@ -37,7 +44,7 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #06b6d4 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-400) 50%, var(--primary-dark) 100%);
         }
 
         .service-card {
@@ -52,7 +59,7 @@
         }
 
         .stats-card {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            background: linear-gradient(135deg, var(--primary-100) 0%, #e0f2fe 100%);
         }
 
         .nav-link {
@@ -81,7 +88,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 20px rgba(var(--primary-rgb, 37, 99, 235), 0.3);
         }
 
         .btn-secondary {
@@ -91,12 +98,21 @@
 
         .btn-secondary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(15, 118, 110, 0.3);
+            box-shadow: 0 10px 20px rgba(var(--secondary-rgb, 15, 118, 110), 0.3);
         }
 
         .footer-gradient {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
+
+        /* Override commonly-used Tailwind blue utilities to map to the logo primary color */
+        .text-blue-600 { color: var(--primary) !important; }
+        .bg-blue-600 { background-color: var(--primary) !important; }
+        .hover\:text-blue-600:hover { color: var(--primary) !important; }
+        .text-blue-100 { color: var(--primary-100) !important; }
+        .bg-blue-100 { background-color: var(--primary-100) !important; }
+        .text-blue-400 { color: var(--primary-400) !important; }
+        .border-blue-600 { border-color: var(--primary) !important; }
 
         .testimonial-card {
             background: white;
@@ -120,13 +136,22 @@
                 text-align: center;
             }
         }
+
+        /* Container-fluid provides consistent left/right padding across the site */
+        .container-fluid {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.25rem; /* 20px */
+            padding-right: 1.25rem;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
+        <div class="container-fluid mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex items-center">
@@ -174,7 +199,7 @@
 
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-16 md:py-24">
-        <div class="container mx-auto px-4">
+        <div class="container-fluid mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 hero-content mb-12 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -239,7 +264,7 @@
 
     <!-- About Us Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="container-fluid mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Welcome To Magnet Solutions</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -294,7 +319,7 @@
 
     <!-- Services Section -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="container-fluid mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Services We Offer</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -402,7 +427,7 @@
 
     <!-- Why Choose Us Section -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="container-fluid mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Magnet Solutions?</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -480,7 +505,7 @@
 
     <!-- Testimonials -->
     <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="container-fluid mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Clients Reviews</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
@@ -528,7 +553,7 @@
 
     <!-- CTA Section -->
     <section class="py-16 hero-gradient text-white">
-        <div class="container mx-auto px-4 text-center">
+        <div class="container-fluid mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Hospital's Quality & Accreditation Standards?
             </h2>
@@ -552,7 +577,7 @@
 
     <!-- Footer -->
     <footer class="footer-gradient text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
+        <div class="container-fluid mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
                 <!-- Quick Links -->
                 <div>
@@ -663,6 +688,14 @@
                 observer.observe(card);
             });
         });
+    </script>
+    <script>
+        // Use the logo's known primary color to ensure consistent branding.
+        document.documentElement.style.setProperty('--primary', '#0b4a75');
+        document.documentElement.style.setProperty('--primary-rgb', '11, 74, 117');
+        document.documentElement.style.setProperty('--primary-100', '#e9f1f8');
+        document.documentElement.style.setProperty('--primary-400', '#2b6b97');
+        document.documentElement.style.setProperty('--primary-dark', '#083955');
     </script>
 </body>
 
