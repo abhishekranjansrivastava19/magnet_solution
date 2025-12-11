@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnet Solutions - Healthcare Accreditation Consultancy</title>
+    <title>Magnet Solutions — Healthcare Accreditation & Consultancy | NABH, NABL, QCI</title>
+    <meta name="description"
+        content="Magnet Solutions helps hospitals, clinics and diagnostic centers achieve NABH, NABL and QCI accreditation with end-to-end consultancy: gap analysis, documentation, staff training, audits and compliance support.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="" id="canonical-link">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
@@ -12,12 +16,14 @@
         rel="stylesheet">
     <style>
         :root {
-            --primary: #0a4a76; /* user-provided */
+            --primary: #0a4a76;
+            /* user-provided */
             --primary-rgb: 10, 74, 118;
             --primary-dark: #083955;
             --primary-100: #e9f1f8;
             --primary-400: #2b6b97;
-            --secondary: #45908b; /* user-provided */
+            --secondary: #45908b;
+            /* user-provided */
             --secondary-rgb: 69, 144, 139;
             --secondary-dark: #376a64;
             --secondary-100: #e6f5f3;
@@ -106,13 +112,33 @@
         }
 
         /* Override commonly-used Tailwind blue utilities to map to the logo primary color */
-        .text-blue-600 { color: var(--primary) !important; }
-        .bg-blue-600 { background-color: var(--primary) !important; }
-        .hover\:text-blue-600:hover { color: var(--primary) !important; }
-        .text-blue-100 { color: var(--primary-100) !important; }
-        .bg-blue-100 { background-color: var(--primary-100) !important; }
-        .text-blue-400 { color: var(--primary-400) !important; }
-        .border-blue-600 { border-color: var(--primary) !important; }
+        .text-blue-600 {
+            color: var(--primary) !important;
+        }
+
+        .bg-blue-600 {
+            background-color: var(--primary) !important;
+        }
+
+        .hover\:text-blue-600:hover {
+            color: var(--primary) !important;
+        }
+
+        .text-blue-100 {
+            color: var(--primary-100) !important;
+        }
+
+        .bg-blue-100 {
+            background-color: var(--primary-100) !important;
+        }
+
+        .text-blue-400 {
+            color: var(--primary-400) !important;
+        }
+
+        .border-blue-600 {
+            border-color: var(--primary) !important;
+        }
 
         .testimonial-card {
             background: white;
@@ -139,13 +165,24 @@
 
         /* Container-fluid provides consistent left/right padding across the site */
         .container-fluid {
-            max-width: 1200px;
+            max-width: 1400px;
             margin-left: auto;
             margin-right: auto;
-            padding-left: 1.25rem; /* 20px */
+            padding-left: 1.25rem;
             padding-right: 1.25rem;
         }
     </style>
+    <script>
+        // Ensure canonical tag points to current page URL when served
+        (function () {
+            try {
+                var cl = document.getElementById('canonical-link');
+                if (cl && (!cl.href || cl.href === window.location.origin + '/')) {
+                    cl.href = window.location.origin + window.location.pathname;
+                }
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
 </head>
 
 <body class="bg-gray-50">
@@ -627,13 +664,12 @@
                 <div class="lg:col-span-2">
                     <h3 class="text-2xl font-bold mb-6">MAP</h3>
                     <div class="bg-gray-800 rounded-xl p-4">
-                        <!-- <div class="h-64 bg-gray-700 rounded-lg flex items-center justify-center mb-4"> -->
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin"
-                            width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <!-- </div> -->
-
+                        <div class="w-full aspect-video bg-gray-700 rounded-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
