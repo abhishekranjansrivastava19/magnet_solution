@@ -14,247 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0a4a76;
-            /* user-provided */
-            --primary-rgb: 10, 74, 118;
-            --primary-dark: #083955;
-            --primary-100: #e9f1f8;
-            --primary-400: #2b6b97;
-            --secondary: #45908b;
-            /* user-provided */
-            --secondary-rgb: 69, 144, 139;
-            --secondary-dark: #376a64;
-            --secondary-100: #e6f5f3;
-            --secondary-400: #38a79e;
-            --accent: #059669;
-            --light-bg: #f8fafc;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-400) 50%, var(--primary-dark) 100%);
-        }
-
-        .service-card {
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border-color: var(--primary);
-        }
-
-        .stats-card {
-            background: linear-gradient(135deg, var(--primary-100) 0%, #e0f2fe 100%);
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .btn-primary {
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(var(--primary-rgb, 37, 99, 235), 0.3);
-        }
-
-        .btn-secondary {
-            background: linear-gradient(to right, var(--secondary), var(--accent));
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(var(--secondary-rgb, 15, 118, 110), 0.3);
-        }
-
-        .footer-gradient {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        }
-
-        /* Override commonly-used Tailwind blue utilities to map to the logo primary color */
-        .text-blue-600 {
-            color: var(--primary) !important;
-        }
-
-        .bg-blue-600 {
-            background-color: var(--primary) !important;
-        }
-
-        .hover\:text-blue-600:hover {
-            color: var(--primary) !important;
-        }
-
-        .text-blue-100 {
-            color: var(--primary-100) !important;
-        }
-
-        .bg-blue-100 {
-            background-color: var(--primary-100) !important;
-        }
-
-        .text-blue-400 {
-            color: var(--primary-400) !important;
-        }
-
-        .border-blue-600 {
-            border-color: var(--primary) !important;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .accreditation-badge {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-            margin: 0 auto 20px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                text-align: center;
-            }
-        }
-
-        /* Container-fluid provides consistent left/right padding across the site */
-        .container-fluid {
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-        }
-
-        /* Dropdown styles */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-toggle {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .dropdown-toggle i {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-            font-size: 0.75em;
-        }
-
-        .dropdown.active .dropdown-toggle i,
-        .dropdown:hover .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            min-width: 200px;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 100;
-        }
-
-        .dropdown:hover .dropdown-menu,
-        .dropdown.active .dropdown-menu {
-            max-height: 500px;
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .dropdown-item {
-            display: block;
-            padding: 0.75rem 1.25rem;
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-item:hover {
-            background-color: var(--primary-100);
-            color: var(--primary);
-        }
-
-        /* Mobile dropdown styles */
-        .mobile-dropdown-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .mobile-dropdown-menu.active {
-            max-height: 500px;
-        }
-
-        .mobile-dropdown-item {
-            display: block;
-            padding: 0.5rem 0 0.5rem 1rem;
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .mobile-dropdown-item:hover {
-            color: var(--primary);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/common.css">
     <script>
         // Ensure canonical tag points to current page URL when served
         (function () {
@@ -290,7 +50,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">HOME</a>
-                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
+                    <a href="about.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
                     
                     <!-- Services Dropdown -->
                     <div class="dropdown">
@@ -320,7 +80,7 @@
                         </div>
                     </div>
                     
-                    <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <a href="project.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
                     <!-- <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">BLOGS</a> -->
                     <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
                 </div>
@@ -335,7 +95,7 @@
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
                     <a href="#" class="text-gray-700 font-medium hover:text-blue-600">HOME</a>
-                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
+                    <a href="about.html" class="text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
                     
                     <!-- Mobile Services Dropdown -->
                     <div class="border-b border-gray-200">
@@ -365,7 +125,7 @@
                         </div>
                     </div>
                     
-                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <a href="project.html" class="text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
                     <a href="#" class="text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
                 </div>
             </div>
@@ -493,7 +253,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-50" id="services">
         <div class="container-fluid mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Services We Offer</h2>
@@ -750,39 +510,28 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (unified with social links) -->
     <footer class="footer-gradient text-white pt-12 pb-6">
         <div class="container-fluid mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-                <!-- Quick Links -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6">QUICK LINKS</h3>
                     <ul class="space-y-3">
                         <li><a href="#" class="text-gray-300 hover:text-white transition">HOME</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
-                        <!-- <li><a href="#" class="text-gray-300 hover:text-white transition">BLOGS</a></li> -->
+                        <li><a href="project.html" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition">CONTACT US</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact Info -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">LOCATION</h3>
+                    <h3 class="text-2xl font-bold mb-6">CONTACT</h3>
                     <div class="space-y-4">
-                        <!-- <div class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
-                            <a href="mailto:info@magnet-solutions.com" class="text-gray-300 hover:text-white transition">
-                                info@magnet-solutions.com
-                            </a>
-                        </div> -->
                         <div class="flex items-start">
                             <i class="fas fa-phone mt-1 mr-3 text-blue-400"></i>
                             <div>
-                                <a href="tel:+918174836441"
-                                    class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
-                                <!-- <a href="tel:+917052279251" class="text-gray-300 hover:text-white transition block">+91-7052279251</a> -->
+                                <a href="tel:+918960025883" class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -798,7 +547,6 @@
                     </div>
                 </div>
 
-                <!-- Map -->
                 <div class="lg:col-span-2">
                     <h3 class="text-2xl font-bold mb-6">MAP</h3>
                     <div class="bg-gray-800 rounded-xl p-4">
@@ -812,12 +560,10 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="border-t border-gray-800 pt-6">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="flex items-center mb-4 md:mb-0">
                         <div class="bg-white text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-                            <!-- <i class="fas fa-magnet text-xl"></i> -->
                             <img src="logo.png" alt="">
                         </div>
                         <div>
@@ -826,9 +572,19 @@
                         </div>
                     </div>
 
-                    <div class="text-gray-400 text-sm text-center md:text-right">
-                        <p>© 2025 Magnet Solutions. All rights reserved.</p>
-                        <p class="mt-1">Designed with precision for healthcare excellence</p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-gray-400 text-sm text-center md:text-right">
+                            <p>© 2025 Magnet Solutions. All rights reserved.</p>
+                            <p class="mt-1">Designed with precision for healthcare excellence</p>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
