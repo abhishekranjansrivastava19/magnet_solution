@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NABH Entry-Level Accreditation — Magnet Solutions</title>
+    <meta name="description" content="NABH Entry-Level Accreditation services from Magnet Solutions.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="services/nabh-entry.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Nav (copied from index) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container-fluid mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div
+                        class="bg-white text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3 shadow-md">
+                        <!-- <i class="fas fa-magnet text-xl"></i> -->
+                        <img src="logo.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">MAGNET <span class="text-blue-600">SOLUTIONS</span>
+                        </h1>
+                        <p class="text-xs text-gray-500">Healthcare Accreditation Specialists</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="nav-link text-gray-700 font-medium hover:text-blue-600">HOME</a>
+                    <a href="../about.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
+
+                    <!-- Services Dropdown -->
+                    <div class="dropdown">
+                        <button
+                            class="nav-link dropdown-toggle text-gray-700 font-medium hover:text-blue-600 bg-none border-none cursor-pointer p-0">
+                            SERVICES
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="nabh-entry.html" class="dropdown-item">NABH Entry-Level Accreditation</a>
+                            <a href="nabh-full.html" class="dropdown-item">NABH Full Accreditation</a>
+                            <a href="nabl-entry.html" class="dropdown-item">NABL Entry-Level Accreditation</a>
+                            <a href="qci-empanelment.html" class="dropdown-item">QCI ECHS & CGHS
+                                Empanelment</a>
+                            <a href="tpa-empanelment.html" class="dropdown-item">TPA Insurance Empanelment</a>
+                        </div>
+                    </div>
+
+                    <!-- IT Services Dropdown -->
+                    <div class="dropdown">
+                        <button
+                            class="nav-link dropdown-toggle text-gray-700 font-medium hover:text-blue-600 bg-none border-none cursor-pointer p-0">
+                            IT SERVICES
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="website-development.html" class="dropdown-item">Website Development</a>
+                            <a href="hospital-software.html" class="dropdown-item">Hospital Software</a>
+                            <a href="digital-marketing.html" class="dropdown-item">Digital Marketing</a>
+                        </div>
+                    </div>
+
+                    <a href="../project.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <!-- <a href="/" class="nav-link text-gray-700 font-medium hover:text-blue-600">BLOGS</a> -->
+                    <a href="../contact.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="/" class="text-gray-700 font-medium hover:text-blue-600">HOME</a>
+                    <a href="../about.html" class="text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
+
+                    <!-- Mobile Services Dropdown -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full text-left text-gray-700 font-medium hover:text-blue-600 py-2 flex justify-between items-center"
+                            onclick="document.getElementById('mobile-services').classList.toggle('active')">
+                            SERVICES
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div id="mobile-services" class="mobile-dropdown-menu">
+                            <a href="nabh-entry.html" class="mobile-dropdown-item">NABH Entry-Level
+                                Accreditation</a>
+                            <a href="nabh-full.html" class="mobile-dropdown-item">NABH Full Accreditation</a>
+                            <a href="nabl-entry.html" class="mobile-dropdown-item">NABL Entry-Level
+                                Accreditation</a>
+                            <a href="qci-empanelment.html" class="mobile-dropdown-item">QCI ECHS & CGHS
+                                Empanelment</a>
+                            <a href="tpa-empanelment.html" class="mobile-dropdown-item">TPA Insurance
+                                Empanelment</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile IT Services Dropdown -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full text-left text-gray-700 font-medium hover:text-blue-600 py-2 flex justify-between items-center"
+                            onclick="document.getElementById('mobile-it-services').classList.toggle('active')">
+                            IT SERVICES
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div id="mobile-it-services" class="mobile-dropdown-menu">
+                            <a href="website-development.html" class="mobile-dropdown-item">Website
+                                Development</a>
+                            <a href="hospital-software.html" class="mobile-dropdown-item">Hospital Software</a>
+                            <a href="digital-marketing.html" class="mobile-dropdown-item">Digital Marketing</a>
+                        </div>
+                    </div>
+
+                    <a href="../project.html" class="text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <a href="../contact.html" class="text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-gradient text-white py-16">
+        <div class="container-fluid mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">NABH Entry-Level Accreditation</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">We guide smaller hospitals and clinics through the NABH Entry-Level accreditation process with clear documentation, staff training, and audit readiness.</p>
+        </div>
+    </section>
+
+    <main class="py-12">
+        <div class="container-fluid mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-4">What we do</h2>
+                <p class="text-gray-700 mb-6">Full gap analysis, policy manuals, process mapping, training and mock assessments to prepare you for the NABH Entry-Level audit.</p>
+                <a href="../contact.html" class="btn-primary text-white py-3 px-6 rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer copied from index -->
+    <footer class="footer-gradient text-white pt-12 pb-6">
+        <div class="container-fluid mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">QUICK LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html" class="text-gray-300 hover:text-white transition">HOME</a></li>
+                        <li><a href="../about.html" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a></li>
+                        <li><a href="../project.html" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-white transition">CONTACT US</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">CONTACT</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-blue-400"></i>
+                            <div>
+                                <a href="tel:+918960025883" class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <a href="https://maps.app.goo.gl/ErHJMYs8h59gvh7n6">
+                                <div class="text-gray-300">
+                                    119/234 Om Nagar<br>
+                                    Darshan Purwa,<br>
+                                    Kanpur Nagar 208012
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-6">MAP</h3>
+                    <div class="bg-gray-800 rounded-xl p-4">
+                        <div class="w-full aspect-video bg-gray-700 rounded-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <div class="bg-white text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
+                            <img src="../logo.png" alt="">
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">MAGNET <span class="text-blue-400">SOLUTIONS</span></h2>
+                            <p class="text-xs text-gray-400">Healthcare Accreditation Specialists</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-6">
+                        <div class="text-gray-400 text-sm text-center md:text-right">
+                            <p>© 2025 Magnet Solutions. All rights reserved.</p>
+                            <p class="mt-1">Designed with precision for healthcare excellence</p>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Use the logo's known primary color to ensure consistent branding.
+        document.documentElement.style.setProperty('--primary', '#0b4a75');
+        document.documentElement.style.setProperty('--primary-rgb', '11, 74, 117');
+        document.documentElement.style.setProperty('--primary-100', '#e9f1f8');
+        document.documentElement.style.setProperty('--primary-400', '#2b6b97');
+        document.documentElement.style.setProperty('--primary-dark', '#083955');
+    </script>
+</body>
+
+</html>

@@ -4,43 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects — Healthcare Accreditation Success Stories | Magnet Solutions</title>
-    <meta name="description"
-        content="View successful NABH, NABL, and QCI accreditation projects completed by Magnet Solutions. Case studies on hospitals, clinics, and diagnostic centers across India.">
+    <title>Contact Us — Magnet Solutions</title>
+    <meta name="description" content="Contact Magnet Solutions for accreditation, consulting and IT services.">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="" id="canonical-link">
+    <link rel="canonical" href="contact.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/common.css">
-    <script>
-        // Canonical tag script from homepage
-        (function () {
-            try {
-                var cl = document.getElementById('canonical-link');
-                if (cl && (!cl.href || cl.href === window.location.origin + '/')) {
-                    cl.href = window.location.origin + window.location.pathname;
-                }
-            } catch (e) { /* ignore */ }
-        })();
-
-        // Mobile menu toggle script (matching the homepage functionality)
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.getElementById('mobile-menu-button');
-            const menu = document.getElementById('mobile-menu');
-            if (button && menu) {
-                button.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-            }
-        });
-    </script>
-    <!-- project styles moved to assets/css/common.css -->
 </head>
 
 <body class="bg-gray-50">
+    <!-- Nav (consistent with other pages) -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container-fluid mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
@@ -108,7 +84,7 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="#" class="text-gray-700 font-medium hover:text-blue-600">HOME</a>
+                    <a href="/" class="text-gray-700 font-medium hover:text-blue-600">HOME</a>
                     <a href="about.html" class="text-gray-700 font-medium hover:text-blue-600">ABOUT US</a>
 
                     <!-- Mobile Services Dropdown -->
@@ -154,133 +130,90 @@
             </div>
         </div>
     </nav>
-
+    <!-- Banner -->
     <section class="hero-gradient text-white py-16">
         <div class="container-fluid mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                Our Successful Accreditation Projects
-            </h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-                Showcasing our track record: Hospitals, labs, and clinics empowered by Magnet Solutions.
-            </p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Magnet
+                Solutions</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Questions
+                about accreditation, IT
+                services, or projects? Fill the form below or reach us
+                directly.</p>
         </div>
     </section>
 
     <section class="py-16 bg-white">
         <div class="container-fluid mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Accreditation Milestones Achieved</h2>
-                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-            </div>
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4">Get in touch</h2>
+                <p class="text-gray-600 mb-6">Reach out for accreditation
+                    consulting, IT services or
+                    project enquiries. Fill the form below or use the
+                    contact details provided.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&h=400&q=80" alt="Hospital Accreditation" class="w-full h-48 object-cover rounded-t-xl">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH Full</span>
-                            <span class="text-gray-500 text-sm">Completed: Q3 2024</span>
+                <form action="submit.php" method="post" class="space-y-6 bg-white p-6 rounded-xl shadow-lg"
+                    id="contact-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" name="name" required placeholder="Full name"
+                            class="w-full p-3 border rounded-lg" />
+                        <input type="email" name="email" required placeholder="Email address"
+                            class="w-full p-3 border rounded-lg" />
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="tel" name="phone" placeholder="Phone number"
+                            class="w-full p-3 border rounded-lg" />
+                        <select name="service" class="w-full p-3 border rounded-lg" required>
+                            <option value>Select service...</option>
+                            <option>NABH Entry-Level Accreditation</option>
+                            <option>NABH Full Accreditation</option>
+                            <option>NABL Entry-Level Accreditation</option>
+                            <option>QCI ECHS & CGHS Empanelment</option>
+                            <option>TPA Insurance Empanelment</option>
+                            <option>Website Development</option>
+                            <option>Hospital Software</option>
+                            <option>Digital Marketing</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <textarea name="message" rows="6" placeholder="Your message"
+                            class="w-full p-3 border rounded-lg"></textarea>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg font-bold">Send
+                            Message</button>
+                        <div class="text-sm text-gray-500">We respond within
+                            1-2 business days.
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Apollo City Hospital, Pune</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Achieved full NABH certification within a stringent 9-month timeline, including 
-                            complete policy standardization and staff training across all 20 clinical departments.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                    </div>
+                </form>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-gray-50 rounded-xl">
+                        <h4 class="font-bold mb-2">Contact Information</h4>
+                        <p class="text-sm text-gray-700">Phone: <a href="tel:+918960025883"
+                                class="text-blue-600">+91-896-0025-883</a></p>
+                        <p class="text-sm text-gray-700">Address: 119/234 Om
+                            Nagar, Darshan Purwa,
+                            Kanpur Nagar 208012</p>
+                        <p class="text-sm text-gray-700">Email: <a href="mailto:info@magnet-solutions.com"
+                                class="text-blue-600">info@magnet-solutions.com</a></p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl">
+                        <h4 class="font-bold mb-2">Office Hours</h4>
+                        <p class="text-sm text-gray-700">Mon — Fri: 9:30 AM
+                            — 6:00 PM</p>
+                        <p class="text-sm text-gray-700">Sat: 10:00 AM —
+                            2:00 PM</p>
                     </div>
                 </div>
-
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1628348068343-c6a848386d34?auto=format&fit=crop&w=600&h=400&q=80" alt="Diagnostic Lab Accreditation" class="w-full h-48 object-cover rounded-t-xl">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABL</span>
-                            <span class="text-gray-500 text-sm">Completed: Q4 2023</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Precision Diagnostics, Bangalore</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Successful implementation of ISO 15189 standards and NABL compliance, resulting in 
-                            zero non-conformities during the final assessment. Enhanced internal quality checks.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1674068565983-d51e7a57a050?auto=format&fit=crop&w=600&h=400&q=80" alt="Small Clinic Accreditation" class="w-full h-48 object-cover rounded-t-xl">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH Entry</span>
-                            <span class="text-gray-500 text-sm">Completed: Q1 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Health First Clinic, Lucknow</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Guided a polyclinic through the simplified NABH Entry-Level accreditation, drastically 
-                            improving patient safety protocol and operational efficiency for future scaling.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1663080649727-ec178b022137?auto=format&fit=crop&w=600&h=400&q=80" alt="Government Empanelment" class="w-full h-48 object-cover rounded-t-xl">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">QCI/CGHS</span>
-                            <span class="text-gray-500 text-sm">Completed: Q2 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Modern Multispeciality, Delhi NCR</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Expedited QCI ECHS and CGHS empanelment, opening new revenue streams by qualifying 
-                            the hospital to serve government beneficiaries efficiently.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1587352342200-d8a4f9103563?auto=format&fit=crop&w=600&h=400&q=80" alt="Ambulance outside hospital" class="w-full h-48 object-cover rounded-t-xl">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">TPA & IT</span>
-                            <span class="text-gray-500 text-sm">Completed: Q3 2023</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Northern General, Jaipur</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Secured empanelment with 15+ major TPAs. Simultaneously launched a new SEO-optimized 
-                            website and digital marketing strategy, boosting patient footfall by 35%.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-blue-600 text-white rounded-xl shadow-lg p-8 flex flex-col justify-center items-center text-center">
-                    <i class="fas fa-handshake text-5xl mb-4"></i>
-                    <h3 class="text-3xl font-bold mb-4">Be Our Next Success Story</h3>
-                    <p class="text-blue-100 mb-6">
-                        Ready to achieve accreditation and elevate your facility's reputation?
-                    </p>
-                    <a href="#" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition">
-                        Get Your Free Consultation
-                    </a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Footer (unified with social links) -->
+    <!-- Footer (copied from index) -->
     <footer class="footer-gradient text-white pt-12 pb-6">
         <div class="container-fluid mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
@@ -288,10 +221,13 @@
                     <h3 class="text-2xl font-bold mb-6">QUICK LINKS</h3>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-gray-300 hover:text-white transition">HOME</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition">ABOUT
+                                US</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a></li>
                         <li><a href="project.html" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">CONTACT US</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">CONTACT
+                                US</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -301,7 +237,8 @@
                         <div class="flex items-start">
                             <i class="fas fa-phone mt-1 mr-3 text-blue-400"></i>
                             <div>
-                                <a href="tel:+918960025883" class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
+                                <a href="tel:+918960025883"
+                                    class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -323,29 +260,33 @@
                         <div class="w-full aspect-video bg-gray-700 rounded-lg overflow-hidden">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 pt-6">
+            <div class="border-t border-gray-800 pt-6">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="flex items-center mb-4 md:mb-0">
                         <div class="bg-white text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
-                            <img src="logo.png" alt="">
+                            <img src="logo.png" alt>
                         </div>
                         <div>
                             <h2 class="text-xl font-bold">MAGNET <span class="text-blue-400">SOLUTIONS</span></h2>
-                            <p class="text-xs text-gray-400">Healthcare Accreditation Specialists</p>
+                            <p class="text-xs text-gray-400">Healthcare
+                                Accreditation Specialists
+                            </p>
                         </div>
                     </div>
 
                     <div class="flex items-center space-x-6">
                         <div class="text-gray-400 text-sm text-center md:text-right">
-                            <p>© <span id="current-year"></span> Magnet Solutions. All rights reserved.</p>
-                            <p class="mt-1">Designed with precision for healthcare excellence</p>
+                            <p>© 2025 Magnet Solutions. All rights
+                                reserved.</p>
+                            <p class="mt-1">Designed with precision for
+                                healthcare excellence</p>
                         </div>
 
                         <div class="footer-social">
@@ -358,10 +299,41 @@
                     </div>
                 </div>
             </div>
-            <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
         </div>
     </footer>
 
-</body>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.service-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+        // Ensure branding vars
+        document.documentElement.style.setProperty('--primary', '#0b4a75');
+        document.documentElement.style.setProperty('--primary-rgb', '11, 74, 117');
+        document.documentElement.style.setProperty('--primary-100', '#e9f1f8');
+        document.documentElement.style.setProperty('--primary-400', '#2b6b97');
+        document.documentElement.style.setProperty('--primary-dark', '#083955');
+    </script>
 
 </html>
