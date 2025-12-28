@@ -362,9 +362,15 @@ h5 {
 .cta-enhanced {
   position: relative;
   overflow: visible;
-  border-radius: 16px;
-  padding: 3rem 1.25rem;
-  background: linear-gradient(90deg, rgba(var(--primary-rgb),0.95), rgba(var(--secondary-rgb),0.95));
+  /* border-radius: 16px; */
+  padding: 7rem 1.25rem;
+  /* background: linear-gradient(90deg, rgba(var(--primary-rgb),0.95), rgba(var(--secondary-rgb),0.95)); */
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-400) 50%,
+    var(--primary-dark) 100%
+  );
   color: white;
   box-shadow: 0 20px 40px rgba(8, 57, 85, 0.18);
 }

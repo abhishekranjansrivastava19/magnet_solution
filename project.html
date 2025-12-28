@@ -97,6 +97,7 @@
                     <a href="project.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
                     <!-- <a href="#" class="nav-link text-gray-700 font-medium hover:text-blue-600">BLOGS</a> -->
                     <a href="contact.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                    <a href="payment.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">PAYMENT</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -150,6 +151,7 @@
 
                     <a href="project.html" class="text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
                     <a href="contact.html" class="text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                    <a href="payment.html" class="text-gray-700 font-medium hover:text-blue-600">PAYMENT</a>
                 </div>
             </div>
         </div>
@@ -172,142 +174,322 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Accreditation Milestones Achieved</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             </div>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <button onclick="filterCards('all')"
+                    class="filter-btn bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                    All
+                </button>
+
+                <button onclick="filterCards('entry')"
+                    class="filter-btn bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm font-semibold">
+                    NABH Entry
+                </button>
+
+                <button onclick="filterCards('full')"
+                    class="filter-btn bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm font-semibold">
+                    NABH Full
+                </button>
+
+                <button onclick="filterCards('qci')"
+                    class="filter-btn bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm font-semibold">
+                    QCI / CGHS
+                </button>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&h=400&q=80" alt="Hospital Accreditation" class="w-full h-48 object-cover rounded-t-xl">
+
+                <!-- 1 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
                     <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH Full</span>
-                            <span class="text-gray-500 text-sm">Completed: Q3 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Apollo City Hospital, Pune</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Achieved full NABH certification within a stringent 9-month timeline, including 
-                            complete policy standardization and staff training across all 20 clinical departments.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Nirwal Hospital, Muzaffarnagar</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level accreditation with patient safety systems, SOPs,
+                            and documentation compliance.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1628348068343-c6a848386d34?auto=format&fit=crop&w=600&h=400&q=80" alt="Diagnostic Lab Accreditation" class="w-full h-48 object-cover rounded-t-xl">
+                <!-- 2 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="full">
+                    <img src="https://images.unsplash.com/photo-1576765607924-b1e48e6f0a65?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
                     <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABL</span>
-                            <span class="text-gray-500 text-sm">Completed: Q4 2023</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Precision Diagnostics, Bangalore</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Successful implementation of ISO 15189 standards and NABL compliance, resulting in 
-                            zero non-conformities during the final assessment. Enhanced internal quality checks.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Full</span>
+                        <h3 class="text-xl font-bold mt-3">Vaishnavi Hospital, Kanpur</h3>
+                        <p class="text-gray-600 mt-2">Achieved Full NABH accreditation with end-to-end quality and
+                            clinical governance implementation.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1674068565983-d51e7a57a050?auto=format&fit=crop&w=600&h=400&q=80" alt="Small Clinic Accreditation" class="w-full h-48 object-cover rounded-t-xl">
+                <!-- 3 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
                     <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH Entry</span>
-                            <span class="text-gray-500 text-sm">Completed: Q1 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Health First Clinic, Lucknow</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Guided a polyclinic through the simplified NABH Entry-Level accreditation, drastically 
-                            improving patient safety protocol and operational efficiency for future scaling.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Gopi Krishna Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level implementation focusing on infection control and
+                            patient rights.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1663080649727-ec178b022137?auto=format&fit=crop&w=600&h=400&q=80" alt="Government Empanelment" class="w-full h-48 object-cover rounded-t-xl">
+                <!-- 4 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
                     <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">QCI/CGHS</span>
-                            <span class="text-gray-500 text-sm">Completed: Q2 2024</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Modern Multispeciality, Delhi NCR</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Expedited QCI ECHS and CGHS empanelment, opening new revenue streams by qualifying 
-                            the hospital to serve government beneficiaries efficiently.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">St. Thomas Hospital, Jaipur</h3>
+                        <p class="text-gray-600 mt-2">Entry-Level NABH accreditation with internal audits and staff
+                            training.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1587352342200-d8a4f9103563?auto=format&fit=crop&w=600&h=400&q=80" alt="Ambulance outside hospital" class="w-full h-48 object-cover rounded-t-xl">
+                <!-- 5 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1582719478181-2a4c9fca7b5e?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
                     <div class="p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">TPA & IT</span>
-                            <span class="text-gray-500 text-sm">Completed: Q3 2023</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Northern General, Jaipur</h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Secured empanelment with 15+ major TPAs. Simultaneously launched a new SEO-optimized 
-                            website and digital marketing strategy, boosting patient footfall by 35%.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
-                            View Case Study <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Narayan Swaroop Hospital, Allahabad</h3>
+                        <p class="text-gray-600 mt-2">Quality indicators, risk management, and NABH entry standards
+                            implemented.</p>
                     </div>
                 </div>
 
-                <div class="bg-blue-600 text-white rounded-xl shadow-lg p-8 flex flex-col justify-center items-center text-center">
-                    <i class="fas fa-handshake text-5xl mb-4"></i>
-                    <h3 class="text-3xl font-bold mb-4">Be Our Next Success Story</h3>
-                    <p class="text-blue-100 mb-6">
-                        Ready to achieve accreditation and elevate your facility's reputation?
-                    </p>
-                    <a href="#" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition">
-                        Get Your Free Consultation
-                    </a>
+                <!-- 6 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Laksh Hospital, Kanpur</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level accreditation with SOP alignment and safety
+                            protocols.</p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1599045118108-bf9954418b76?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">New Max Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">Entry-Level NABH standards implemented for operational excellence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Abhishek Hospital, Kanpur</h3>
+                        <p class="text-gray-600 mt-2">Patient-centric quality systems implemented under NABH
+                            Entry-Level.</p>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Urmila Devi Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">Entry-Level NABH with documentation control and safety practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="qci">
+                    <img src="https://images.unsplash.com/photo-1663080649727-ec178b022137?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            + QCI CGHS</span>
+                        <h3 class="text-xl font-bold mt-3">DP Bora Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level and QCI CGHS empanelment completed.</p>
+                    </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1587352342200-d8a4f9103563?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Paras Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level accreditation with structured quality framework.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="qci">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">QCI
+                            CGHS</span>
+                        <h3 class="text-xl font-bold mt-3">Aparajita Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">Successful QCI CGHS empanelment with inspection clearance.</p>
+                    </div>
+                </div>
+
+                <!-- 13 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1628348068343-c6a848386d34?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Aashiyana Hospital, Lucknow</h3>
+                        <p class="text-gray-600 mt-2">Entry-Level NABH accreditation with patient safety focus.</p>
+                    </div>
+                </div>
+
+                <!-- 14 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="full">
+                    <img src="https://images.unsplash.com/photo-1576765607924-b1e48e6f0a65?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Full</span>
+                        <h3 class="text-xl font-bold mt-3">Brijlal Hospital, Haldwani</h3>
+                        <p class="text-gray-600 mt-2">Full NABH accreditation with mature quality systems.</p>
+                    </div>
+                </div>
+
+                <!-- 15 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Sai Ram Charitable Hospital, Kanpur</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level accreditation with charity hospital compliance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 16 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="qci">
+                    <img src="https://images.unsplash.com/photo-1666214280368-67e39e1b8fd4?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            + QCI CGHS</span>
+                        <h3 class="text-xl font-bold mt-3">Chandbhal Hospital, Kanpur</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level and QCI CGHS empanelment completed.</p>
+                    </div>
+                </div>
+
+                <!-- 17 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="qci">
+                    <img src="https://images.unsplash.com/photo-1618939304347-e91b1f33b7a5?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            + QCI CGHS</span>
+                        <h3 class="text-xl font-bold mt-3">Royal Children Hospital, Kanpur</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level and government empanelment achieved.</p>
+                    </div>
+                </div>
+
+                <!-- 18 -->
+                <div class="project-card bg-gray-50 rounded-xl shadow-lg hover:shadow-xl" data-category="entry">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=600&h=400&q=80"
+                        class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <span class="bg-blue-400 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">NABH
+                            Entry Level</span>
+                        <h3 class="text-xl font-bold mt-3">Shri Radha Krishna Hospital, Chhattisgarh</h3>
+                        <p class="text-gray-600 mt-2">NABH Entry-Level accreditation with patient-centric systems.</p>
+                    </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
-    <!-- Footer (unified with social links) -->
+    <!-- CTA -->
+    <section class="cta-enhanced">
+        <div class="cta-content">
+            <h2>Ready to elevate your facility's quality?</h2>
+            <p>Start your accreditation journey or request a demo of our IT systems.</p>
+            <div class="cta-cta-row">
+                <a href="contact.html" class="btn-cta-primary">Contact Us</a>
+                <a href="index.html#services" class="btn-cta-secondary">View Services</a>
+            </div>
+        </div>
+        <div class="cta-decor" aria-hidden="true"></div>
+    </section>
+
     <footer class="footer-gradient text-white pt-12 pb-6">
         <div class="container-fluid mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">POPULAR LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services/nabh-entry.html" class="text-gray-300 hover:text-white transition">NABH Entry-Level Accreditation</a></li>
+                        <li><a href="services/nabh-full.html" class="text-gray-300 hover:text-white transition">NABH Full Accreditation</a></li>
+                        <li><a href="services/nabl-entry.html" class="text-gray-300 hover:text-white transition">NABL Entry-Level Accreditation</a></li>
+                        <li><a href="services/qci-empanelment.html" class="text-gray-300 hover:text-white transition">QCI ECHS & CGHS Empanelment</a></li>
+                        <li><a href="services/tpa-empanelment.html" class="text-gray-300 hover:text-white transition">TPA Insurance Empanelment</a></li>
+                        <li><a href="services/website-development.html" class="text-gray-300 hover:text-white transition">Website Development</a></li>
+                        <li><a href="services/hospital-software.html" class="text-gray-300 hover:text-white transition">Hospital Software</a></li>
+                        <li><a href="services/digital-marketing.html" class="text-gray-300 hover:text-white transition">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
                 <div>
                     <h3 class="text-2xl font-bold mb-6">QUICK LINKS</h3>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="text-gray-300 hover:text-white transition">HOME</a></li>
                         <li><a href="about.html" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">SERVICES</a></li>
                         <li><a href="project.html" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
                         <li><a href="contact.html" class="text-gray-300 hover:text-white transition">CONTACT US</a></li>
+                        <li><a href="payment.html" class="text-gray-300 hover:text-white transition">PAYMENT</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="text-2xl font-bold mb-6">CONTACT</h3>
-                    <div class="space-y-4">
+                    <div class="space-y-3 text-gray-300">
                         <div class="flex items-start">
                             <i class="fas fa-phone mt-1 mr-3 text-blue-400"></i>
                             <div>
-                                <a href="tel:+918960025883" class="text-gray-300 hover:text-white transition block">+91-896-0025-883</a>
+                                <a href="tel:+918960025883" class="hover:text-white transition block">+91-896-0025-883</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <div>
+                                <a href="mailto:info@magnetsolutions.in" class="hover:text-white transition">info@magnetsolutions.in</a>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
                             <a href="https://maps.app.goo.gl/ErHJMYs8h59gvh7n6">
-                                <div class="text-gray-300">
+                                <div class="">
                                     119/234 Om Nagar<br>
                                     Darshan Purwa,<br>
                                     Kanpur Nagar 208012
@@ -317,22 +499,35 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-2">
+                <div>
                     <h3 class="text-2xl font-bold mb-6">MAP</h3>
-                    <div class="bg-gray-800 rounded-xl p-4">
-                        <div class="w-full aspect-video bg-gray-700 rounded-lg overflow-hidden">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                    <div class="bg-gray-800 rounded-xl p-2 h-40 overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7229819142813!2d80.31515597520814!3d26.464656976917087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4780e2e0fdc1%3A0x8a915f2b809e9152!2s119%2C%20Om%20Nagar%20Rd%2C%20Behind%20Vicky%20Gupta%2C%20Om%20Nagar%2C%20Darshan%20Purwa%2C%20Kanpur%2C%20Uttar%20Pradesh%20208012!5e0!3m2!1sen!2sin!4v1764846054554!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
 
             <div class="border-t border-gray-700 pt-6">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex items-center mb-4 md:mb-0">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-center sm:space-x-3 order-1 sm:order-2">
+                        <div class="text-gray-400 text-sm text-center sm:text-right mb-2 sm:mb-0">
+                            <p>© <span id="current-year"></span> Magnet Solutions. All rights reserved.</p>
+                            <p class="mt-1">Designed with precision for healthcare excellence</p>
+                        </div>
+
+                        <div class="footer-social flex items-center space-x-4 justify-center sm:justify-start">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-3 order-2 sm:order-1">
                         <div class="bg-white text-blue-600 w-10 h-10 rounded-lg flex items-center justify-center mr-3">
                             <img src="logo.png" alt="">
                         </div>
@@ -341,26 +536,35 @@
                             <p class="text-xs text-gray-400">Healthcare Accreditation Specialists</p>
                         </div>
                     </div>
-
-                    <div class="flex items-center space-x-6">
-                        <div class="text-gray-400 text-sm text-center md:text-right">
-                            <p>© <span id="current-year"></span> Magnet Solutions. All rights reserved.</p>
-                            <p class="mt-1">Designed with precision for healthcare excellence</p>
-                        </div>
-
-                        <div class="footer-social">
-                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
         </div>
     </footer>
+
+    <script>
+        function filterCards(category) {
+            const cards = document.querySelectorAll('.project-card');
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-blue-100', 'text-blue-700');
+            });
+
+            event.target.classList.remove('bg-blue-100', 'text-blue-700');
+            event.target.classList.add('bg-blue-600', 'text-white');
+        }
+    </script>
 
 </body>
 
