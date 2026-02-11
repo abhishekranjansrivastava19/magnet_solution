@@ -5,17 +5,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NABH Entry-Level Accreditation — Magnet Solutions</title>
-    <meta name="description" content="NABH Entry-Level Accreditation services from Magnet Solutions.">
+    <meta name="description"
+        content="NABH Entry-Level Accreditation consultancy and implementation support by Magnet Solutions.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="services/nabh-entry.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(42, 157, 143, 0.9)),
+                url('https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: #ffd166;
+        }
+
+       
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(38, 70, 83, 0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f1f8ff;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            /* border-radius: 10px; */
+            overflow: hidden;
+            /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+        }
+
+        .image-content img {
+            /* width: 100%; */
+            /* height: auto; */
+            object-fit: contain;
+            /* transition: transform 0.5s ease; */
+        }
+
+        .icon-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid #2a9d8f;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            color: #1a5f7a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.7rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #ffd166;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #1a5f7a;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: flex;
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2a9d8f;
+        }
+
+        .importance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .importance-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .importance-icon {
+            color: #2a9d8f;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .highlight {
+            background-color: #e9f7f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd166;
+            margin: 2rem 0;
+        }
+
+        .process-image-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .process-image {
+            width: 500px;
+            /* max-width: 900px; */
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+       
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .process-steps,
+            .services-grid,
+            .importance-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
-    <!-- Nav (copied from index) -->
+    <!-- Nav (kept identical to other service pages) -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container-fluid mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
@@ -23,7 +252,6 @@
                 <div class="flex items-center">
                     <div
                         class="bg-white text-white w-10 h-10 rounded-lg flex items-center justify-center mr-3 shadow-md">
-                        <!-- <i class="fas fa-magnet text-xl"></i> -->
                         <img src="../logo.png" alt="">
                     </div>
                     <div>
@@ -49,8 +277,7 @@
                             <a href="nabh-entry.html" class="dropdown-item">NABH Entry-Level Accreditation</a>
                             <a href="nabh-full.html" class="dropdown-item">NABH Full Accreditation</a>
                             <a href="nabl-entry.html" class="dropdown-item">NABL Entry-Level Accreditation</a>
-                            <a href="qci-empanelment.html" class="dropdown-item">QCI ECHS & CGHS
-                                Empanelment</a>
+                            <a href="qci-empanelment.html" class="dropdown-item">QCI ECHS & CGHS Empanelment</a>
                             <a href="tpa-empanelment.html" class="dropdown-item">TPA Insurance Empanelment</a>
                         </div>
                     </div>
@@ -69,9 +296,10 @@
                         </div>
                     </div>
 
-                    <a href="../project.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
-                    <!-- <a href="/" class="nav-link text-gray-700 font-medium hover:text-blue-600">BLOGS</a> -->
-                    <a href="../contact.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">CONTACT US</a>
+                    <a href="../project.html"
+                        class="nav-link text-gray-700 font-medium hover:text-blue-600">PROJECTS</a>
+                    <a href="../contact.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">CONTACT
+                        US</a>
                     <a href="../payment.html" class="nav-link text-gray-700 font-medium hover:text-blue-600">PAYMENT</a>
                 </div>
 
@@ -96,15 +324,11 @@
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div id="mobile-services" class="mobile-dropdown-menu">
-                            <a href="nabh-entry.html" class="mobile-dropdown-item">NABH Entry-Level
-                                Accreditation</a>
+                            <a href="nabh-entry.html" class="mobile-dropdown-item">NABH Entry-Level Accreditation</a>
                             <a href="nabh-full.html" class="mobile-dropdown-item">NABH Full Accreditation</a>
-                            <a href="nabl-entry.html" class="mobile-dropdown-item">NABL Entry-Level
-                                Accreditation</a>
-                            <a href="qci-empanelment.html" class="mobile-dropdown-item">QCI ECHS & CGHS
-                                Empanelment</a>
-                            <a href="tpa-empanelment.html" class="mobile-dropdown-item">TPA Insurance
-                                Empanelment</a>
+                            <a href="nabl-entry.html" class="mobile-dropdown-item">NABL Entry-Level Accreditation</a>
+                            <a href="qci-empanelment.html" class="mobile-dropdown-item">QCI ECHS & CGHS Empanelment</a>
+                            <a href="tpa-empanelment.html" class="mobile-dropdown-item">TPA Insurance Empanelment</a>
                         </div>
                     </div>
 
@@ -117,8 +341,7 @@
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
                         <div id="mobile-it-services" class="mobile-dropdown-menu">
-                            <a href="website-development.html" class="mobile-dropdown-item">Website
-                                Development</a>
+                            <a href="website-development.html" class="mobile-dropdown-item">Website Development</a>
                             <a href="hospital-software.html" class="mobile-dropdown-item">Hospital Software</a>
                             <a href="digital-marketing.html" class="mobile-dropdown-item">Digital Marketing</a>
                         </div>
@@ -132,24 +355,212 @@
         </div>
     </nav>
 
-    <section class="hero-gradient text-white py-16">
-        <div class="container-fluid mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">NABH Entry-Level Accreditation</h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">We guide smaller hospitals and clinics through the NABH Entry-Level accreditation process with clear documentation, staff training, and audit readiness.</p>
-        </div>
-    </section>
 
-    <main class="py-12">
-        <div class="container-fluid mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow">
-                <h2 class="text-2xl font-bold mb-4">What we do</h2>
-                <p class="text-gray-700 mb-6">Full gap analysis, policy manuals, process mapping, training and mock assessments to prepare you for the NABH Entry-Level audit.</p>
-                <a href="../contact.html" class="btn-primary text-white py-3 px-6 rounded-lg">Contact Us</a>
+    <header class="hero-gradient">
+        <div class="container">
+            <div class="logo-container">
+                <!-- <img class="logo" src="../assets/images/NABH-Entry-Level.jpg" alt=""> -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">NABH Entry Level Accreditation</h1>
             </div>
+            <p class="tagline">National Accreditation Board for Hospitals & Healthcare Providers - Ensuring Quality
+                Healthcare Standards Across India</p>
         </div>
+    </header>
+
+
+    <main class="container">
+        <section id="definition" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">What is NABH Entry Level Accreditation?</h2>
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-info-circle icon"></i>
+                        <p>The <strong>NABH Entry Level Accreditation</strong> is a stepping stone for healthcare
+                            organizations in India to begin their quality improvement journey. It is designed for
+                            smaller hospitals and healthcare providers who are at the initial stages of implementing
+                            quality standards.</p>
+                        <p>This accreditation focuses on building a strong foundation for patient safety and quality
+                            care by establishing basic protocols and systems. It serves as a preparatory stage for
+                            hospitals aspiring to achieve full NABH accreditation in the future.</p>
+                        <div class="highlight">
+                            <p><strong>Key Objective:</strong> To encourage healthcare organizations to implement basic
+                                quality and patient safety protocols, creating a culture of continuous improvement from
+                                the ground up.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="../assets/images/NABH-Entry-Level.jpg"
+                        alt="Healthcare professionals discussing patient care in a hospital setting">
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Accreditation Process</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">The NABH Entry Level Accreditation
+                process is designed to be achievable for smaller healthcare facilities while ensuring meaningful quality
+                improvements.</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="text-2xl font-bold">Application</h3>
+                    <p>Healthcare organization submits formal application to NABH with required documents and fees.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="text-2xl font-bold">Self-Assessment</h3>
+                    <p>Organization conducts internal assessment against Entry Level standards and identifies gaps.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="text-2xl font-bold">Documentation</h3>
+                    <p>Preparation and implementation of required policies, procedures, and records as per standards.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="text-2xl font-bold">Internal Audit</h3>
+                    <p>Organization conducts internal audit to verify implementation of quality systems.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3 class="text-2xl font-bold">Assessment</h3>
+                    <p>NABH conducts assessment through document review and on-site visit (if required).</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3 class="text-2xl font-bold">Accreditation</h3>
+                    <p>Successful organizations receive Entry Level Accreditation valid for 2 years.</p>
+                </div>
+            </div>
+
+            <div class="process-image-container">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Medical professionals reviewing documents and quality procedures" class="process-image" style="display: flex; align-items: center; ">
+                <p class="image-caption">NABH accreditation involves thorough review of hospital processes and
+                    documentation</p>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Note:</strong> The Entry Level Accreditation is valid for two years, during which the
+                    organization is expected to work towards full NABH accreditation. Organizations need to apply for
+                    full accreditation before the expiry of their Entry Level status.</p>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Services Provided Under Accreditation</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">NABH Entry Level Accreditation ensures
+                that healthcare organizations provide safe and quality services across all key areas.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-user-md icon"></i>
+                    <h3 class="text-2xl font-bold">Patient Care Services</h3>
+                    <ul>
+                        <li>Accessibility, assessment and continuity of care</li>
+                        <li>Care of patients</li>
+                        <li>Management of medication</li>
+                        <li>Patient rights and education</li>
+                        <li>Hospital infection control</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-clipboard-check icon"></i>
+                    <h3 class="text-2xl font-bold">Organization Management</h3>
+                    <ul>
+                        <li>Continuous quality improvement</li>
+                        <li>Responsibilities of management</li>
+                        <li>Facility management and safety</li>
+                        <li>Human resource management</li>
+                        <li>Information management system</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-procedures icon"></i>
+                    <h3 class="text-2xl font-bold">Clinical Support Services</h3>
+                    <ul>
+                        <li>Management of laboratory services</li>
+                        <li>Management of radiology services</li>
+                        <li>Management of pharmacy services</li>
+                        <li>Equipment management</li>
+                        <li>Outpatient services</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="importance" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Importance of NABH Entry Level Accreditation</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Achieving NABH Entry Level
+                Accreditation provides significant benefits to healthcare organizations, patients, and the healthcare
+                system as a whole.</p>
+
+            <div class="content">
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Doctor and patient interaction showing trust and quality care">
+                </div>
+                <div class="text-content">
+                    <div class="importance-list">
+                        <div class="importance-item">
+                            <i class="fas fa-shield-alt importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Enhanced Patient Safety</h3>
+                                <p>Establishes protocols that reduce medical errors and healthcare-associated
+                                    infections, ensuring safer care delivery.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-chart-line importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Quality Improvement Culture</h3>
+                                <p>Fosters a systematic approach to quality, encouraging continuous monitoring and
+                                    improvement of services.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-handshake importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Patient Confidence</h3>
+                                <p>Builds trust among patients and their families by demonstrating commitment to quality
+                                    standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-users importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Staff Development</h3>
+                                <p>Improves staff morale and competency through training and clear protocols, reducing
+                                    variability in care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>National Impact:</strong> NABH Entry Level Accreditation plays a crucial role in improving
+                    the overall quality of healthcare in India by making quality standards accessible to smaller
+                    hospitals and healthcare providers across the country, including in remote and rural areas.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- CTA -->
+
+    <!-- CTA (same style as other pages) -->
     <section class="cta-enhanced">
         <div class="cta-content">
             <h2>Ready to elevate your facility's quality?</h2>
@@ -162,21 +573,31 @@
         <div class="cta-decor" aria-hidden="true"></div>
     </section>
 
-    <!-- Unified Footer: Quick Links + Popular Links + Contact + Map + Branding -->
+
+
+    <!-- Footer (unchanged structure) -->
     <footer class="footer-gradient text-white pt-12 pb-6">
         <div class="container-fluid mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-2xl font-bold mb-6">POPULAR LINKS</h3>
                     <ul class="space-y-3">
-                        <li><a href="nabh-entry.html" class="text-gray-300 hover:text-white transition">NABH Entry-Level Accreditation</a></li>
-                        <li><a href="nabh-full.html" class="text-gray-300 hover:text-white transition">NABH Full Accreditation</a></li>
-                        <li><a href="nabl-entry.html" class="text-gray-300 hover:text-white transition">NABL Entry-Level Accreditation</a></li>
-                        <li><a href="qci-empanelment.html" class="text-gray-300 hover:text-white transition">QCI ECHS & CGHS Empanelment</a></li>
-                        <li><a href="tpa-empanelment.html" class="text-gray-300 hover:text-white transition">TPA Insurance Empanelment</a></li>
-                        <li><a href="website-development.html" class="text-gray-300 hover:text-white transition">Website Development</a></li>
-                        <li><a href="hospital-software.html" class="text-gray-300 hover:text-white transition">Hospital Software</a></li>
-                        <li><a href="digital-marketing.html" class="text-gray-300 hover:text-white transition">Digital Marketing</a></li>
+                        <li><a href="nabh-entry.html" class="text-gray-300 hover:text-white transition">NABH Entry-Level
+                                Accreditation</a></li>
+                        <li><a href="nabh-full.html" class="text-gray-300 hover:text-white transition">NABH Full
+                                Accreditation</a></li>
+                        <li><a href="nabl-entry.html" class="text-gray-300 hover:text-white transition">NABL Entry-Level
+                                Accreditation</a></li>
+                        <li><a href="qci-empanelment.html" class="text-gray-300 hover:text-white transition">QCI ECHS &
+                                CGHS Empanelment</a></li>
+                        <li><a href="tpa-empanelment.html" class="text-gray-300 hover:text-white transition">TPA
+                                Insurance Empanelment</a></li>
+                        <li><a href="website-development.html" class="text-gray-300 hover:text-white transition">Website
+                                Development</a></li>
+                        <li><a href="hospital-software.html" class="text-gray-300 hover:text-white transition">Hospital
+                                Software</a></li>
+                        <li><a href="digital-marketing.html" class="text-gray-300 hover:text-white transition">Digital
+                                Marketing</a></li>
                     </ul>
                 </div>
 
@@ -185,8 +606,10 @@
                     <ul class="space-y-3">
                         <li><a href="../index.html" class="text-gray-300 hover:text-white transition">HOME</a></li>
                         <li><a href="../about.html" class="text-gray-300 hover:text-white transition">ABOUT US</a></li>
-                        <li><a href="../project.html" class="text-gray-300 hover:text-white transition">PROJECTS</a></li>
-                        <li><a href="../contact.html" class="text-gray-300 hover:text-white transition">CONTACT US</a></li>
+                        <li><a href="../project.html" class="text-gray-300 hover:text-white transition">PROJECTS</a>
+                        </li>
+                        <li><a href="../contact.html" class="text-gray-300 hover:text-white transition">CONTACT US</a>
+                        </li>
                         <li><a href="../payment.html" class="text-gray-300 hover:text-white transition">PAYMENT</a></li>
                     </ul>
                 </div>
@@ -197,13 +620,15 @@
                         <div class="flex items-start">
                             <i class="fas fa-phone mt-1 mr-3 text-blue-400"></i>
                             <div>
-                                <a href="tel:+918960025883" class="hover:text-white transition block">+91-896-0025-883</a>
+                                <a href="tel:+918960025883"
+                                    class="hover:text-white transition block">+91-896-0025-883</a>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
                             <div>
-                                <a href="mailto:info@magnetsolutions.in" class="hover:text-white transition">info@magnetsolutions.in</a>
+                                <a href="mailto:info@magnetsolutions.in"
+                                    class="hover:text-white transition">info@magnetsolutions.in</a>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -262,18 +687,81 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+            if (menu) menu.classList.toggle('hidden');
         });
 
-        // Use the logo's known primary color to ensure consistent branding.
-        document.documentElement.style.setProperty('--primary', '#0b4a75');
-        document.documentElement.style.setProperty('--primary-rgb', '11, 74, 117');
-        document.documentElement.style.setProperty('--primary-100', '#e9f1f8');
-        document.documentElement.style.setProperty('--primary-400', '#2b6b97');
-        document.documentElement.style.setProperty('--primary-dark', '#083955');
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const nav = document.getElementById('mainNav');
+                    const menuBtn = document.getElementById('mobileMenuBtn');
+                    const icon = menuBtn.querySelector('i');
+
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Animation for process steps on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe process steps
+        document.querySelectorAll('.process-step').forEach(step => {
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(20px)';
+            step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(step);
+        });
+
+        // Observe cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease';
+            observer.observe(card);
+        });
     </script>
 </body>
 
