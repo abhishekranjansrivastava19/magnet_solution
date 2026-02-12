@@ -12,6 +12,233 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(42, 157, 143, 0.9)),
+                url('https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: #ffd166;
+        }
+
+
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(38, 70, 83, 0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f1f8ff;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            /* border-radius: 10px; */
+            overflow: hidden;
+            /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+        }
+
+        .image-content img {
+            /* width: 100%; */
+            /* height: auto; */
+            object-fit: contain;
+            /* transition: transform 0.5s ease; */
+        }
+
+        .icon-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid #2a9d8f;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            color: #1a5f7a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.7rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #ffd166;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #1a5f7a;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: flex;
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2a9d8f;
+        }
+
+        .importance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .importance-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .importance-icon {
+            color: #2a9d8f;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .highlight {
+            background-color: #e9f7f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd166;
+            margin: 2rem 0;
+        }
+
+        .process-image-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .process-image {
+            width: 500px;
+            /* max-width: 900px; */
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .process-steps,
+            .services-grid,
+            .importance-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
@@ -132,28 +359,339 @@
         </div>
     </nav>
 
-    <section class="hero-gradient text-white py-16">
-        <div class="container-fluid mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">NABH Full Accreditation</h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Complete NABH accreditation support for larger hospitals and multispecialty centres.</p>
-        </div>
-    </section>
-
-    <main class="py-12">
-        <div class="container-fluid mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow">
-                <h2 class="text-2xl font-bold mb-4">Comprehensive Accreditation Services</h2>
-                <p class="text-gray-700 mb-6">Policy development, committee setup, performance indicators, clinical audits and mock assessments to ensure full NABH compliance.</p>
-                <a href="../contact.html" class="btn-primary text-white py-3 px-6 rounded-lg">Contact Us</a>
+    <header class="hero-gradient">
+        <div class="container">
+            <div class="logo-container">
+                <!-- <img class="logo" src="../assets/images/nabh-full.jpg" alt=""> -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">NABH Full Accreditation</h1>
             </div>
+            <p class="tagline">National Accreditation Board for Hospitals & Healthcare Providers - Ensuring Quality Healthcare Standards Across India</p>
         </div>
+    </header>
+
+    <main class="container">
+        <section id="introduction" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">What is NABH Full Accreditation?</h2>
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-award icon"></i>
+                        <p><strong>NABH Full Accreditation</strong> is a rigorous quality certification awarded by the National Accreditation Board for Hospitals & Healthcare Providers (NABH), a constituent board of the Quality Council of India (QCI).</p>
+                        <p>It evaluates hospitals on advanced quality parameters, including:</p>
+                        <ul style="list-style: circle;" class="mt-2">
+                            <li>Patient rights and safety</li>
+                            <li>Clinical governance</li>
+                            <li>Infection prevention and control</li>
+                            <li>Medication management</li>
+                            <li>Continuous quality improvement</li>
+                            <li>Risk management and patient outcomes</li>
+                        </ul>
+                        <p>NABH Full Accreditation aligns Indian hospitals with international best practices in healthcare.</p>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="../assets/images/nabh-full.jpg" alt="NABH Full Accreditation certificate and quality standards">
+                </div>
+            </div>
+        </section>
+
+        <section id="who-should-apply" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Who Should Apply for NABH Full Accreditation?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">NABH Full Accreditation is suitable for hospitals committed to achieving the highest standards of healthcare quality and safety.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-hospital icon"></i>
+                    <h3 class="text-2xl font-bold">Multispecialty Hospitals</h3>
+                    <p>Large hospitals offering multiple medical specialties requiring comprehensive quality management.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-stethoscope icon"></i>
+                    <h3 class="text-2xl font-bold">Super Specialty Hospitals</h3>
+                    <p>Advanced medical centers focusing on specialized treatments and complex procedures.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-graduation-cap icon"></i>
+                    <h3 class="text-2xl font-bold">Teaching Hospitals</h3>
+                    <p>Medical institutions involved in education and research requiring stringent quality protocols.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-building icon"></i>
+                    <h3 class="text-2xl font-bold">Corporate Hospitals</h3>
+                    <p>Hospitals seeking international credibility and competitive advantage in healthcare delivery.</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Ideal Candidates:</strong> Hospitals that already have NABH Entry-Level Accreditation or internal quality systems are ideal candidates for upgrading to Full Accreditation.</p>
+            </div>
+        </section>
+
+        <section id="scope" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Scope of NABH Full Accreditation Standards</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">NABH Full standards are comprehensive and cover all hospital functions, ensuring safe, standardized, and measurable healthcare delivery.</p>
+
+            <div class="content">
+                <div class="text-content">
+                    <div class="importance-list">
+                        <div class="importance-item">
+                            <i class="fas fa-user-md importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Patient-Centered Standards</h3>
+                                <ul style="list-style: circle;">
+                                    <li>Patient rights and education</li>
+                                    <li>Access, assessment, and continuity of care</li>
+                                    <li>Care of patients (COP)</li>
+                                    <li>Medication management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-cogs importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Organization-Centered Standards</h3>
+                                <ul style="list-style: circle;">
+                                    <li>Infection prevention and control (IPC)</li>
+                                    <li>Hospital safety and facility management</li>
+                                    <li>Human resource management</li>
+                                    <li>Information management systems</li>
+                                    <li>Continuous quality improvement (CQI)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare standards and protocols documentation">
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our NABH Full Accreditation Process</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">MAGNET SOLUTIONS follows a structured, department-wise, and implementation-driven approach to ensure successful NABH Full Accreditation.</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="text-2xl font-bold">Detailed Gap Analysis</h3>
+                    <p>We assess every department against NABH Full standards to identify gaps in policies, practices, infrastructure, documentation, and staff competency. A detailed action plan is prepared.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="text-2xl font-bold">Comprehensive Documentation</h3>
+                    <p>We develop complete NABH documentation, including hospital manuals, department SOPs, clinical protocols, policies, forms, and quality indicators. All documents are customized to actual hospital workflows.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="text-2xl font-bold">Staff Training & Capacity Building</h3>
+                    <p>We conduct extensive training for doctors, nurses, technicians, and administrative staff. Training focuses on NABH standards, patient safety goals, infection control, and documentation practices.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="text-2xl font-bold">Implementation & Monitoring</h3>
+                    <p>Our team supports on-ground implementation of safe clinical practices, medication safety, infection control measures, incident reporting systems, and quality indicator monitoring.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3 class="text-2xl font-bold">Internal Audit & Mock Assessment</h3>
+                    <p>We conduct internal audits and full mock assessments simulating NABH assessors, ensuring zero surprises during the actual assessment.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3 class="text-2xl font-bold">NABH Application & Final Assessment Support</h3>
+                    <p>We manage NABH application, assessment coordination, and on-site support until accreditation is granted.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits of NABH Full Accreditation</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Achieving NABH Full Accreditation provides significant benefits to hospitals, patients, and the healthcare system as a whole.</p>
+
+            <div class="content">
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Successful healthcare outcomes and patient satisfaction">
+                </div>
+                <div class="text-content">
+                    <div class="importance-list">
+                        <div class="importance-item">
+                            <i class="fas fa-shield-alt importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Enhanced Patient Safety</h3>
+                                <p>Standardized clinical and non-clinical processes significantly reduce risks and errors, ensuring safer care delivery.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-chart-line importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Improved Clinical Outcomes</h3>
+                                <p>Evidence-based practices improve treatment quality and patient recovery rates.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-handshake importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Increased Patient Trust & Brand Value</h3>
+                                <p>NABH-accredited hospitals enjoy higher credibility and public confidence.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-users importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Eligibility for Empanelments</h3>
+                                <p>Mandatory or preferred for insurance companies, TPAs, corporate tie-ups, and government schemes.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-cogs importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Operational Excellence</h3>
+                                <p>Clear SOPs improve efficiency, accountability, and staff coordination.</p>
+                            </div>
+                        </div>
+
+                        <div class="importance-item">
+                            <i class="fas fa-sync-alt importance-icon"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold">Culture of Continuous Improvement</h3>
+                                <p>Quality becomes an ongoing process, not a one-time activity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Challenges Hospitals Face Without NABH Full Accreditation</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Hospitals without NABH Full Accreditation often struggle with various quality and operational challenges.</p>
+
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-exclamation-triangle icon"></i>
+                        <p><b>Hospitals without NABH Full Accreditation often struggle with:</b></p>
+                        <ul style="list-style: circle;" class="mt-2">
+                            <li>Inconsistent clinical practices</li>
+                            <li>Higher infection rates</li>
+                            <li>Poor documentation</li>
+                            <li>Difficulty in insurance empanelment</li>
+                            <li>Limited corporate & government tie-ups</li>
+                        </ul>
+                        <p>NABH Full Accreditation addresses these challenges holistically by establishing standardized processes and quality management systems.</p>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare challenges and quality improvement">
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose MAGNET SOLUTIONS for NABH Full Accreditation?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">MAGNET SOLUTIONS is a specialized healthcare accreditation consultancy with hands-on experience across diverse hospital settings.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-check-circle icon"></i>
+                    <h3 class="text-2xl font-bold">End-to-end Support</h3>
+                    <p>Complete NABH Full accreditation support from gap analysis to final assessment.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-tools icon"></i>
+                    <h3 class="text-2xl font-bold">Practical Methodology</h3>
+                    <p>Implementation-focused approach with minimal operational disruption.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-user-tie icon"></i>
+                    <h3 class="text-2xl font-bold">Experienced Professionals</h3>
+                    <p>Team of healthcare quality experts with extensive accreditation experience.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-customize icon"></i>
+                    <h3 class="text-2xl font-bold">Department-wise Customization</h3>
+                    <p>Tailored solutions adapted to your hospital's specific needs and workflows.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-clock icon"></i>
+                    <h3 class="text-2xl font-bold">Faster Accreditation Cycles</h3>
+                    <p>Efficient processes that help achieve accreditation in shorter timeframes.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-users-cog icon"></i>
+                    <h3 class="text-2xl font-bold">Extended Quality Team</h3>
+                    <p>We work as an integral part of your quality management team, not just consultants.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="post-accreditation" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Post-Accreditation Support</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Quality does not stop after accreditation. We provide comprehensive ongoing support to maintain and improve standards.</p>
+
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-chart-bar icon"></i>
+                        <p><b>Our post-accreditation support includes:</b></p>
+                        <ul style="list-style: circle;" class="mt-2">
+                            <li>Surveillance audit support</li>
+                            <li>Continuous quality improvement guidance</li>
+                            <li>Staff refresher training</li>
+                            <li>Quality indicator monitoring</li>
+                        </ul>
+                        <p>We ensure your hospital maintains NABH standards and continues to improve quality over time.</p>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Continuous quality improvement and monitoring">
+                </div>
+            </div>
+        </section>
+
+        <section id="start-journey" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Start Your NABH Full Accreditation Journey</h2>
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-rocket icon"></i>
+                        <p>If your hospital aims to achieve excellence, credibility, and sustainable growth, NABH Full Accreditation is the right step. Contact MAGNET SOLUTIONS today to begin your journey towards healthcare excellence.</p>
+                        <div class="highlight">
+                            <p><strong>Take the First Step:</strong> Schedule a consultation with our accreditation experts to assess your hospital's readiness and develop a customized accreditation roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare excellence and accreditation success">
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- CTA -->
     <section class="cta-enhanced">
         <div class="cta-content">
-            <h2>Ready to elevate your facility's quality?</h2>
-            <p>Start your accreditation journey or request a demo of our IT systems.</p>
+            <h2>Start Your NABH Full Accreditation Journey</h2>
+            <p class="text-center">If your hospital aims to achieve excellence, credibility, and sustainable growth, NABH Full Accreditation is the right step.</p>
             <div class="cta-cta-row">
                 <a href="../contact.html" class="btn-cta-primary">Contact Us</a>
                 <a href="../index.html#services" class="btn-cta-secondary">Explore Services</a>
@@ -268,4 +806,5 @@
     </script>
 </body>
 
+</html>
 </html>

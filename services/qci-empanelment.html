@@ -5,13 +5,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QCI ECHS & CGHS Empanelment — Magnet Solutions</title>
-    <meta name="description" content="QCI ECHS & CGHS Empanelment services for hospitals.">
+    <meta name="description"
+        content="QCI ECHS & CGHS Empanelment consultancy and implementation support by Magnet Solutions.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="services/qci-empanelment.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(42, 157, 143, 0.9)),
+                url('https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: #ffd166;
+        }
+
+       
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(38, 70, 83, 0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f1f8ff;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            /* border-radius: 10px; */
+            overflow: hidden;
+            /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+        }
+
+        .image-content img {
+            /* width: 100%; */
+            /* height: auto; */
+            object-fit: contain;
+            /* transition: transform 0.5s ease; */
+        }
+
+        .icon-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid #2a9d8f;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            color: #1a5f7a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.7rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #ffd166;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #1a5f7a;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: flex;
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2a9d8f;
+        }
+
+        .importance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .importance-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .importance-icon {
+            color: #2a9d8f;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .highlight {
+            background-color: #e9f7f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd166;
+            margin: 2rem 0;
+        }
+
+        .process-image-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .process-image {
+            width: 500px;
+            /* max-width: 900px; */
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+       
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .process-steps,
+            .services-grid,
+            .importance-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
@@ -132,28 +361,321 @@
         </div>
     </nav>
 
-    <section class="hero-gradient text-white py-16">
-        <div class="container-fluid mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">QCI ECHS & CGHS Empanelment</h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Assistance to secure empanelment with government healthcare schemes and quality councils.</p>
-        </div>
-    </section>
-
-    <main class="py-12">
-        <div class="container-fluid mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow">
-                <h2 class="text-2xl font-bold mb-4">Government Empanelment Services</h2>
-                <p class="text-gray-700 mb-6">End-to-end support for QCI, ECHS and CGHS applications and compliance checks.</p>
-                <a href="../contact.html" class="btn-primary text-white py-3 px-6 rounded-lg">Contact Us</a>
+    <header class="hero-gradient">
+        <div class="container">
+            <div class="logo-container">
+                <!-- <img class="logo" src="../assets/images/QCI.png" alt="QCI Logo"> -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">QCI ECHS & CGHS Empanelment</h1>
             </div>
+            <p class="tagline">Quality Council of India - Ensuring Compliance for Government Healthcare Schemes</p>
         </div>
+    </header>
+
+    <main class="container">
+        <section id="definition" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">What is QCI ECHS & CGHS Empanelment?</h2>
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-info-circle icon"></i>
+                        <p>Government healthcare schemes such as ECHS (Ex-Servicemen Contributory Health Scheme) and CGHS (Central Government Health Scheme) provide medical benefits to lakhs of beneficiaries across India. For hospitals, empanelment under these schemes ensures steady patient inflow, enhanced credibility, and long-term revenue stability.</p>
+                        <p>To qualify for ECHS and CGHS empanelment, hospitals must undergo Quality Council of India (QCI) assessment, which evaluates infrastructure, patient safety, infection control, and service standards.</p>
+                        <div class="highlight">
+                            <p><strong>MAGNET SOLUTIONS</strong> provides complete QCI ECHS & CGHS empanelment consultancy services, helping hospitals achieve compliance smoothly and efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="../assets/images/QCI.png" alt="QCI ECHS & CGHS Empanelment">
+                </div>
+            </div>
+        </section>
+
+        <section id="importance" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why QCI Assessment is Important</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">QCI ensures that hospitals meet the highest standards for government healthcare beneficiaries.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-shield-alt importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Infrastructure Standards</h3>
+                        <p>Maintain minimum infrastructure standards required for quality healthcare delivery.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-virus importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Infection Control</h3>
+                        <p>Follow infection control protocols to ensure patient and staff safety.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-user-shield importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Patient Safety</h3>
+                        <p>Ensure patient safety measures and ethical healthcare practices.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-clipboard-check importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Documentation</h3>
+                        <p>Maintain proper documentation and transparent healthcare services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>QCI approval</strong> is often mandatory for ECHS and CGHS empanelment, ensuring hospitals deliver safe and reliable healthcare services to government beneficiaries.</p>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our QCI ECHS & CGHS Empanelment Process</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">MAGNET SOLUTIONS follows a structured approach to maximize approval success.</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="text-2xl font-bold">Initial Infrastructure & Compliance Review</h3>
+                    <p>We evaluate your hospital's readiness against QCI guidelines and identify deficiencies.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="text-2xl font-bold">Documentation Preparation</h3>
+                    <p>We prepare and organize policy documents, infection control records, staff qualification documents, equipment maintenance logs, and statutory licenses.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="text-2xl font-bold">Staff Awareness & Training</h3>
+                    <p>We train hospital staff on patient safety protocols, infection control practices, documentation standards, and inspection preparedness.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="text-2xl font-bold">Mock QCI Inspection</h3>
+                    <p>A simulated inspection is conducted to ensure readiness and eliminate gaps before the actual assessment.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3 class="text-2xl font-bold">Application & Authority Coordination</h3>
+                    <p>We assist in application submission, coordination with authorities, and handling queries until approval is granted.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Scope of QCI Assessment</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">QCI inspection evaluates comprehensive healthcare standards.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-building icon"></i>
+                    <h3 class="text-2xl font-bold">Infrastructure & Facilities</h3>
+                    <ul style="list-style: circle;">
+                        <li>Hospital infrastructure & bed strength</li>
+                        <li>ICU, OT, and emergency facilities</li>
+                        <li>Biomedical waste management</li>
+                        <li>Fire safety compliance</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-users icon"></i>
+                    <h3 class="text-2xl font-bold">Operations & Staff</h3>
+                    <ul style="list-style: circle;">
+                        <li>Infection control practices</li>
+                        <li>Qualified manpower availability</li>
+                        <li>Patient record systems</li>
+                        <li>Statutory licenses and registrations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits of QCI ECHS & CGHS Empanelment</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Empanelment provides significant advantages for healthcare organizations.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-users importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Access to Government Beneficiaries</h3>
+                        <p>Empanelment allows hospitals to treat ex-servicemen, their families, and central government employees & pensioners.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-chart-line importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Increased Patient Volume</h3>
+                        <p>Government schemes provide consistent patient inflow and steady revenue streams.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-star importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Enhanced Credibility</h3>
+                        <p>Empanelment strengthens hospital reputation and builds public trust.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-trophy importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Competitive Edge</h3>
+                        <p>Empanelled hospitals gain preference over non-empanelled competitors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Common Challenges in QCI Empanelment</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Hospitals often face various obstacles during the empanelment process.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-file-alt importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Incomplete Documentation</h3>
+                        <p>Lack of proper documentation and record-keeping systems.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-tools importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Infrastructure Gaps</h3>
+                        <p>Inadequate facilities and equipment not meeting QCI standards.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-exclamation-triangle importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Inspection Anxiety</h3>
+                        <p>Fear and unpreparedness for the QCI assessment process.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-clock importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Application Delays</h3>
+                        <p>Delays in application submission and authority coordination.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>MAGNET SOLUTIONS</strong> addresses these challenges through hands-on support and structured implementation.</p>
+            </div>
+        </section>
+
+        <section id="why-choose" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose MAGNET SOLUTIONS?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">We have extensive experience in healthcare compliance and empanelment consultancy.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-handshake importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">End-to-end Support</h3>
+                        <p>Complete empanelment support from assessment to approval.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-brain importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">In-depth Knowledge</h3>
+                        <p>Deep understanding of QCI guidelines and requirements.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-lightbulb importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Gap-closure Solutions</h3>
+                        <p>Practical solutions to address identified deficiencies.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-rocket importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Faster Turnaround</h3>
+                        <p>Efficient documentation preparation and processing.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-check-circle importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">High Success Rate</h3>
+                        <p>Proven track record of successful empanelments.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-user-tie importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Professional Services</h3>
+                        <p>Transparent and professional consultancy approach.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>We focus on real readiness</strong>, not last-minute adjustments, ensuring sustainable compliance and long-term success.</p>
+            </div>
+        </section>
+
+        <section id="renewal" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Renewal & Re-Assessment Support</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Empanelment requires periodic renewal and ongoing compliance maintenance.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-sync icon"></i>
+                    <h3 class="text-2xl font-bold">Renewal Preparation</h3>
+                    <ul style="list-style: circle;">
+                        <li>Assessment of current compliance status</li>
+                        <li>Documentation updates and reviews</li>
+                        <li>Gap analysis and corrective actions</li>
+                        <li>Application assistance for renewal</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-eye icon"></i>
+                    <h3 class="text-2xl font-bold">Ongoing Compliance</h3>
+                    <ul style="list-style: circle;">
+                        <li>Continuous monitoring systems</li>
+                        <li>Regular compliance audits</li>
+                        <li>Staff training and retraining</li>
+                        <li>Documentation maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- CTA -->
+    <!-- CTA (same style as other pages) -->
     <section class="cta-enhanced">
         <div class="cta-content">
-            <h2>Ready to elevate your facility's quality?</h2>
-            <p>Start your accreditation journey or request a demo of our IT systems.</p>
+            <h2>Ready to get empanelled?</h2>
+            <p>Start your QCI ECHS & CGHS empanelment journey or request a consultation for government healthcare schemes.</p>
             <div class="cta-cta-row">
                 <a href="../contact.html" class="btn-cta-primary">Contact Us</a>
                 <a href="../index.html#services" class="btn-cta-secondary">Explore Services</a>
