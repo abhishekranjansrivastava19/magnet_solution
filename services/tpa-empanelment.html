@@ -5,13 +5,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPA Insurance Empanelment — Magnet Solutions</title>
-    <meta name="description" content="TPA Insurance Empanelment services to help hospitals connect with insurance providers.">
+    <meta name="description"
+        content="TPA Insurance Empanelment consultancy and implementation support by Magnet Solutions.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="services/tpa-empanelment.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/common.css">
+
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(rgba(26, 95, 122, 0.9), rgba(42, 157, 143, 0.9)),
+                url('https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: #ffd166;
+        }
+
+
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(38, 70, 83, 0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f1f8ff;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            /* border-radius: 10px; */
+            overflow: hidden;
+            /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+        }
+
+        .image-content img {
+            /* width: 100%; */
+            /* height: auto; */
+            object-fit: contain;
+            /* transition: transform 0.5s ease; */
+        }
+
+        .icon-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid #2a9d8f;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            color: #1a5f7a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #ffd166;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #1a5f7a;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: flex;
+            /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2a9d8f;
+        }
+
+        .importance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .importance-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .importance-icon {
+            color: #2a9d8f;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .highlight {
+            background-color: #e9f7f4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ffd166;
+            margin: 2rem 0;
+        }
+
+        .process-image-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .process-image {
+            width: 500px;
+            /* max-width: 900px; */
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .process-steps,
+            .services-grid,
+            .importance-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
@@ -132,28 +352,393 @@
         </div>
     </nav>
 
-    <section class="hero-gradient text-white py-16">
-        <div class="container-fluid mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">TPA Insurance Empanelment</h1>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto">Increase your patient reach by getting empaneled with major TPAs.</p>
-        </div>
-    </section>
-
-    <main class="py-12">
-        <div class="container-fluid mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow">
-                <h2 class="text-2xl font-bold mb-4">TPA Empanelment Support</h2>
-                <p class="text-gray-700 mb-6">Documentation, negotiation, and onboarding support to get recognized by third-party administrators.</p>
-                <a href="../contact.html" class="btn-primary text-white py-3 px-6 rounded-lg">Contact Us</a>
+    <header class="hero-gradient">
+        <div class="container">
+            <div class="logo-container">
+                <!-- <img class="logo" src="../assets/images/tpa.webp" alt="TPA Logo"> -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">TPA Insurance Empanelment</h1>
             </div>
+            <p class="tagline">Expanding Healthcare Access Through Insurance Partnerships</p>
         </div>
+    </header>
+
+    <main class="container">
+        <section id="definition" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">What is TPA Insurance Empanelment?</h2>
+            <div class="content">
+                <div class="text-content">
+                    <div class="icon-box">
+                        <i class="fas fa-info-circle icon"></i>
+                        <p>In today's healthcare ecosystem, insurance-based treatment has become a major driver of hospital revenue. A large percentage of patients prefer hospitals that offer cashless treatment facilities under health insurance policies. To provide these services, hospitals must obtain empanelment with TPAs (Third Party Administrators) and insurance companies.</p>
+                        <p>A Third Party Administrator (TPA) is an organization authorized by insurance companies to process claims and manage cashless hospitalization services. When a hospital is empanelled with TPAs and insurance companies, it can provide cashless treatment to insured patients, submit claims directly to TPAs, receive reimbursements as per agreed package rates, increase patient accessibility, and become part of insurance provider networks.</p>
+                        <div class="highlight">
+                            <p><strong>MAGNET SOLUTIONS</strong> offers comprehensive TPA Insurance Empanelment consultancy services, helping hospitals across India get empanelled smoothly and efficiently with leading TPAs and insurance providers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="../assets/images/tpa.webp" alt="TPA Insurance Empanelment">
+                </div>
+            </div>
+        </section>
+
+        <section id="importance" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why TPA Empanelment is Important for Hospitals</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">TPA empanelment opens new revenue streams and enhances patient accessibility.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-users importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Growing Insurance Coverage</h3>
+                        <p>With increasing health insurance penetration in India, more patients prefer hospitals that provide cashless services.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-trophy importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Competitive Advantage</h3>
+                        <p>Hospitals offering cashless facilities attract more patients compared to non-empanelled hospitals.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-chart-line importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Revenue Growth</h3>
+                        <p>Insurance empanelment ensures a consistent and structured revenue stream.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-handshake importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Corporate & Institutional Tie-ups</h3>
+                        <p>Many corporate organizations require hospitals to be insurance-empanelled.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="who-should-apply" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Who Should Apply for TPA Empanelment?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Various types of healthcare facilities can benefit from TPA empanelment.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-hospital icon"></i>
+                    <h3 class="text-2xl font-bold">Multispecialty Hospitals</h3>
+                    <p>Large hospitals with comprehensive services.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-stethoscope icon"></i>
+                    <h3 class="text-2xl font-bold">Specialty Hospitals</h3>
+                    <p>Hospitals focused on specific medical specialties.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-clinic-medical icon"></i>
+                    <h3 class="text-2xl font-bold">Nursing Homes & Day Care Centers</h3>
+                    <p>Smaller healthcare facilities providing essential services.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-baby icon"></i>
+                    <h3 class="text-2xl font-bold">Maternity & Surgical Centers</h3>
+                    <p>Specialized centers for maternity care and surgeries.</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>If your hospital aims to expand patient reach and financial stability</strong>, TPA empanelment is essential.</p>
+            </div>
+        </section>
+
+        <section id="scope" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Scope of TPA Insurance Empanelment</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">TPA and insurance companies evaluate hospitals based on comprehensive criteria.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-building icon"></i>
+                    <h3 class="text-2xl font-bold">Infrastructure & Facilities</h3>
+                    <ul>
+                        <li>Hospital infrastructure and bed capacity</li>
+                        <li>ICU and OT facilities</li>
+                        <li>Biomedical waste management</li>
+                        <li>Fire safety compliance</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-users icon"></i>
+                    <h3 class="text-2xl font-bold">Operations & Compliance</h3>
+                    <ul>
+                        <li>Qualified medical staff</li>
+                        <li>Equipment availability</li>
+                        <li>Statutory licenses and registrations</li>
+                        <li>NABH accreditation status (preferred)</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-file-alt icon"></i>
+                    <h3 class="text-2xl font-bold">Documentation & Systems</h3>
+                    <ul>
+                        <li>Billing and documentation systems</li>
+                        <li>Patient record management</li>
+                        <li>Claim processing protocols</li>
+                        <li>Quality assurance measures</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our TPA Insurance Empanelment Process</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">MAGNET SOLUTIONS follows a structured, result-oriented process.</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="text-2xl font-bold">Eligibility Assessment</h3>
+                    <p>We assess your hospital's readiness for empanelment, including infrastructure, compliance, and documentation.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="text-2xl font-bold">Documentation Preparation</h3>
+                    <p>We prepare and organize all required documents such as hospital profile, registration certificates, fire safety clearance, biomedical waste authorization, staff qualification details, bank details, and billing formats.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="text-2xl font-bold">Policy & SOP Alignment</h3>
+                    <p>We ensure your internal policies align with TPA and insurance claim requirements, reducing future claim rejections.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="text-2xl font-bold">Application Submission</h3>
+                    <p>We assist in submitting applications to multiple TPAs and insurance companies.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3 class="text-2xl font-bold">Follow-Up & Coordination</h3>
+                    <p>We coordinate with TPAs for inspections, clarifications, and approval follow-ups.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3 class="text-2xl font-bold">Onboarding & Operational Guidance</h3>
+                    <p>Once approved, we guide hospitals on cashless authorization process, claim documentation, package rate compliance, and rejection handling.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits of TPA Insurance Empanelment</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Empanelment provides significant advantages for healthcare organizations.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-credit-card importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Cashless Treatment Facility</h3>
+                        <p>Allows insured patients to receive treatment without upfront payment.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-users importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Increased Patient Footfall</h3>
+                        <p>Patients prefer hospitals within their insurance network.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-clock importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Faster Claim Processing</h3>
+                        <p>Structured systems reduce delays and errors.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-chart-line importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Revenue Stability</h3>
+                        <p>Insurance tie-ups provide predictable and recurring revenue.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-star importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Brand Credibility</h3>
+                        <p>Association with reputed insurance companies enhances hospital image.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-building importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Corporate Patient Access</h3>
+                        <p>Empanelment opens doors to corporate and institutional patients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Common Challenges in TPA Empanelment</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Hospitals often face various obstacles during the empanelment process.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-file-alt importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Lengthy Documentation</h3>
+                        <p>Requirements for extensive documentation can be overwhelming.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-times-circle importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Application Rejections</h3>
+                        <p>Risks of rejection due to incomplete or incorrect submissions.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-clock importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Delayed Approvals</h3>
+                        <p>Long processing times for approvals and empanelment.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-exclamation-triangle importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Claim Rejection Issues</h3>
+                        <p>Problems with claim documentation and improper billing.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-question-circle importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Lack of Understanding</h3>
+                        <p>Unfamiliarity with package rates and TPA processes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>MAGNET SOLUTIONS</strong> helps eliminate these challenges through structured planning and expert coordination.</p>
+            </div>
+        </section>
+
+        <section id="why-choose" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose MAGNET SOLUTIONS?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">We combine healthcare compliance expertise with practical insurance knowledge.</p>
+
+            <div class="importance-list">
+                <div class="importance-item">
+                    <i class="fas fa-handshake importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">End-to-end Support</h3>
+                        <p>Complete empanelment support from assessment to approval.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-users importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Multiple TPA Assistance</h3>
+                        <p>Support for empanelment with multiple TPAs and insurers.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-file-alt importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Customized Documentation</h3>
+                        <p>Tailored documentation support for your hospital.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-rocket importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Faster Approvals</h3>
+                        <p>Efficient processes leading to quicker approval timelines.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-check-circle importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">High Success Rate</h3>
+                        <p>Proven track record of successful empanelments.</p>
+                    </div>
+                </div>
+
+                <div class="importance-item">
+                    <i class="fas fa-user-tie importance-icon"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold">Professional Service</h3>
+                        <p>Transparent and professional consultancy approach.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <p><strong>We don't just help you get empanelled</strong> — we help you operate smoothly after empanelment.</p>
+            </div>
+        </section>
+
+        <section id="post-empanelment" class="section">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">Post-Empanelment Support</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Our services continue even after approval.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-users icon"></i>
+                    <h3 class="text-2xl font-bold">Staff Training</h3>
+                    <ul>
+                        <li>Training on claim documentation</li>
+                        <li>Billing process optimization</li>
+                        <li>Claim rejection analysis</li>
+                        <li>Ongoing compliance monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-sync icon"></i>
+                    <h3 class="text-2xl font-bold">Renewal Support</h3>
+                    <ul>
+                        <li>Renewal preparation assistance</li>
+                        <li>Documentation updates</li>
+                        <li>Additional TPA onboarding</li>
+                        <li>Continuous improvement guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- CTA -->
+    <!-- CTA (same style as other pages) -->
     <section class="cta-enhanced">
         <div class="cta-content">
-            <h2>Ready to elevate your facility's quality?</h2>
-            <p>Start your accreditation journey or request a demo of our IT systems.</p>
+            <h2>Ready to expand your patient reach?</h2>
+            <p>Start your TPA Insurance Empanelment journey and unlock new revenue streams through insurance partnerships.</p>
             <div class="cta-cta-row">
                 <a href="../contact.html" class="btn-cta-primary">Contact Us</a>
                 <a href="../index.html#services" class="btn-cta-secondary">Explore Services</a>
@@ -265,7 +850,79 @@
             const menu = document.getElementById('mobile-menu');
             if (menu) menu.classList.toggle('hidden');
         });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const nav = document.getElementById('mainNav');
+                    const menuBtn = document.getElementById('mobileMenuBtn');
+                    const icon = menuBtn.querySelector('i');
+
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+
+                    // Scroll to element
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Animation for process steps on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe process steps
+        document.querySelectorAll('.process-step').forEach(step => {
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(20px)';
+            step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(step);
+        });
+
+        // Observe cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease';
+            observer.observe(card);
+        });
     </script>
 </body>
 
+</html>
 </html>
